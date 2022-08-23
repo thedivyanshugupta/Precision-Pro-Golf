@@ -8,9 +8,125 @@
 import SwiftUI
 
 struct ContentView: View {
+
     var body: some View {
-        Text("Hello, world!")
+        VStack {
+            TabView {
+                VStack {
+                    Image("green_logo")
+                        .resizable()
+                        .frame(width: 150, height: 150.3)
+                        .padding()
+
+                    Text("Welcome to")
+                        .font(.system(size: 24))
+                        .padding()
+
+                    Text("View detailed course information, learn club distances, and measure progress so you can Hit More Greens.")
+                        .font(.system(size: 14))
+                        .frame(width: 265, height: 53)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.gray)
+                        .padding()
+                }
+                
+                VStack {
+                    Image("onboarding_2")
+                        .resizable()
+                        .frame(width: 297, height: 331)
+//                        .padding()
+
+                    Text("View Detailed")
+                        .font(.system(size: 22))
+//                        .padding()
+
+                    Text("Front, center, and back of the green. With 35,000+ golf courses, we’ve got you covered.")
+                        .font(.system(size: 14))
+                        .frame(width: 265, height: 53)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.gray)
+//                        .padding()
+                }
+                
+                VStack {
+                    Image("onboarding_3")
+                        .resizable()
+                        .frame(width: 321, height: 285)
+//                        .padding()
+
+                    Text("Learn Club Distances")
+                        .font(.system(size: 24))
+//                        .padding()
+
+                    Text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.")
+                        .font(.system(size: 14))
+                        .frame(width: 265, height: 53)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.red)
+//                        .padding()
+                }
+                
+                VStack {
+                    Image("onboarding_4")
+                        .resizable()
+                        .frame(width: 361, height: 361)
+//                        .padding()
+
+                    Text("Analyze Progress")
+                        .font(.system(size: 22))
+//                        .padding()
+
+                    Text("See where you’re strong, where you’re weak, and what area you need to improve for lower scores.")
+                        .font(.system(size: 14))
+                        .frame(width: 270, height: 53)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.gray)
+//                        .padding()
+                }
+                
+                VStack {
+                    Image("onboarding_5")
+                        .resizable()
+                        .frame(width: 313, height: 313)
+//                        .padding()
+
+                    Text("Connect a Device")
+                        .font(.system(size: 22))
+//                        .padding()
+
+                    Text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.")
+                        .font(.system(size: 14))
+                        .frame(width: 265, height: 53)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.red)
+//                        .padding()
+                }
+            }
+           .tabViewStyle(.page)
+           .indexViewStyle(.page(backgroundDisplayMode: .always))
+            
+            Button("GET STARTED") {
+                NewView()
+            }
             .padding()
+            .font(.system(size: 14))
+            .frame(width: 303, height: 62)
+            .background(.green)
+            .foregroundColor(.white)
+            .clipShape(RoundedRectangle(cornerRadius: 16))
+            
+            Text("No Email Required")
+                .foregroundColor(.gray)
+                .font(.system(size: 15))
+            
+            Button("Login") {
+                NewView()
+            }
+            .padding()
+            .background(.white)
+            .foregroundColor(.gray)
+//            .clipShape(Capsule())
+        }
     }
 }
 
