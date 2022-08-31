@@ -19,11 +19,11 @@ struct ContentView: View {
                         .padding()
 
                     Text("Welcome to")
-                        .font(.system(size: 24))
+                        .font(Font.custom("ProximaNova-Bold", size: 22))
                         .padding()
 
                     Text("View detailed course information, learn club distances, and measure progress so you can Hit More Greens.")
-                        .font(.system(size: 14))
+                        .font(Font.custom("ProximaNova-Semibold", size: 14))
                         .frame(width: 265, height: 53)
                         .multilineTextAlignment(.center)
                         .foregroundColor(.gray)
@@ -37,11 +37,11 @@ struct ContentView: View {
 //                        .padding()
 
                     Text("View Detailed")
-                        .font(.system(size: 22))
+                        .font(Font.custom("ProximaNova-Bold", size: 22))
 //                        .padding()
 
                     Text("Front, center, and back of the green. With 35,000+ golf courses, we’ve got you covered.")
-                        .font(.system(size: 14))
+                        .font(Font.custom("ProximaNova-Semibold", size: 14))
                         .frame(width: 265, height: 53)
                         .multilineTextAlignment(.center)
                         .foregroundColor(.gray)
@@ -55,11 +55,11 @@ struct ContentView: View {
 //                        .padding()
 
                     Text("Learn Club Distances")
-                        .font(.system(size: 24))
+                        .font(Font.custom("ProximaNova-Bold", size: 22))
 //                        .padding()
 
                     Text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.")
-                        .font(.system(size: 14))
+                        .font(Font.custom("ProximaNova-Semibold", size: 14))
                         .frame(width: 265, height: 53)
                         .multilineTextAlignment(.center)
                         .foregroundColor(.red)
@@ -73,11 +73,11 @@ struct ContentView: View {
 //                        .padding()
 
                     Text("Analyze Progress")
-                        .font(.system(size: 22))
+                        .font(Font.custom("ProximaNova-Bold", size: 22))
 //                        .padding()
 
                     Text("See where you’re strong, where you’re weak, and what area you need to improve for lower scores.")
-                        .font(.system(size: 14))
+                        .font(Font.custom("ProximaNova-Semibold", size: 14))
                         .frame(width: 270, height: 53)
                         .multilineTextAlignment(.center)
                         .foregroundColor(.gray)
@@ -91,11 +91,11 @@ struct ContentView: View {
 //                        .padding()
 
                     Text("Connect a Device")
-                        .font(.system(size: 22))
+                        .font(Font.custom("ProximaNova-Bold", size: 22))
 //                        .padding()
 
                     Text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.")
-                        .font(.system(size: 14))
+                        .font(Font.custom("ProximaNova-Semibold", size: 14))
                         .frame(width: 265, height: 53)
                         .multilineTextAlignment(.center)
                         .foregroundColor(.red)
@@ -103,26 +103,29 @@ struct ContentView: View {
                 }
             }
            .tabViewStyle(.page)
-           .indexViewStyle(.page(backgroundDisplayMode: .always))
+           .indexViewStyle(.page(backgroundDisplayMode: .always ))
             
             Button("GET STARTED") {
                 NewView()
             }
             .padding()
-            .font(.system(size: 14))
+            .font(Font.custom("ProximaNova-Bold", size: 14))
             .frame(width: 303, height: 62)
             .background(.green)
             .foregroundColor(.white)
             .clipShape(RoundedRectangle(cornerRadius: 16))
             
             Text("No Email Required")
+//            ProximaNova-Semibold-Italic.otf
+                .font(Font.custom("ProximaNova-Semibold-Italic", size: 14))
                 .foregroundColor(.gray)
-                .font(.system(size: 15))
+//                .font(.system(size: 15))
             
             Button("Login") {
                 NewView()
             }
             .padding()
+            .font(Font.custom("ProximaNova-Bold", size: 14))
             .background(.white)
             .foregroundColor(.gray)
 //            .clipShape(Capsule())

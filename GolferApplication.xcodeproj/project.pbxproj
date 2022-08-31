@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C005BCB28B4EDC800810E59 /* ProximaNova-Semibold-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1C005BC328B4EDC700810E59 /* ProximaNova-Semibold-Italic.otf */; };
+		1C005BCC28B4EDC800810E59 /* ProximaNova-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C005BC428B4EDC700810E59 /* ProximaNova-Light.ttf */; };
+		1C005BCD28B4EDC800810E59 /* ProximaNova-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C005BC528B4EDC700810E59 /* ProximaNova-Bold.ttf */; };
+		1C005BCE28B4EDC800810E59 /* ProximaNova-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C005BC628B4EDC700810E59 /* ProximaNova-Semibold.ttf */; };
+		1C005BCF28B4EDC800810E59 /* ProximaNova-Extrabld.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C005BC728B4EDC700810E59 /* ProximaNova-Extrabld.ttf */; };
+		1C005BD028B4EDC800810E59 /* ProximaNovaT-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C005BC828B4EDC700810E59 /* ProximaNovaT-Thin.ttf */; };
+		1C005BD128B4EDC800810E59 /* ProximaNova-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C005BC928B4EDC700810E59 /* ProximaNova-Regular.ttf */; };
+		1C005BD228B4EDC800810E59 /* ProximaNova-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C005BCA28B4EDC700810E59 /* ProximaNova-Black.ttf */; };
 		1C428E7828B3673E00F11919 /* GolferApplicationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C428E7728B3673E00F11919 /* GolferApplicationApp.swift */; };
 		1C428E7A28B3673E00F11919 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C428E7928B3673E00F11919 /* ContentView.swift */; };
 		1C428E7C28B3674500F11919 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C428E7B28B3674500F11919 /* Assets.xcassets */; };
@@ -17,6 +25,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C005BC328B4EDC700810E59 /* ProximaNova-Semibold-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Semibold-Italic.otf"; sourceTree = "<group>"; };
+		1C005BC428B4EDC700810E59 /* ProximaNova-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Light.ttf"; sourceTree = "<group>"; };
+		1C005BC528B4EDC700810E59 /* ProximaNova-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.ttf"; sourceTree = "<group>"; };
+		1C005BC628B4EDC700810E59 /* ProximaNova-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Semibold.ttf"; sourceTree = "<group>"; };
+		1C005BC728B4EDC700810E59 /* ProximaNova-Extrabld.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Extrabld.ttf"; sourceTree = "<group>"; };
+		1C005BC828B4EDC700810E59 /* ProximaNovaT-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaT-Thin.ttf"; sourceTree = "<group>"; };
+		1C005BC928B4EDC700810E59 /* ProximaNova-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Regular.ttf"; sourceTree = "<group>"; };
+		1C005BCA28B4EDC700810E59 /* ProximaNova-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Black.ttf"; sourceTree = "<group>"; };
+		1C005BD328B4EF9200810E59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1C428E7428B3673E00F11919 /* GolferApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GolferApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C428E7728B3673E00F11919 /* GolferApplicationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GolferApplicationApp.swift; sourceTree = "<group>"; };
 		1C428E7928B3673E00F11919 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +55,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C005BC228B4EDC700810E59 /* proxima-nova */ = {
+			isa = PBXGroup;
+			children = (
+				1C005BC328B4EDC700810E59 /* ProximaNova-Semibold-Italic.otf */,
+				1C005BC428B4EDC700810E59 /* ProximaNova-Light.ttf */,
+				1C005BC528B4EDC700810E59 /* ProximaNova-Bold.ttf */,
+				1C005BC628B4EDC700810E59 /* ProximaNova-Semibold.ttf */,
+				1C005BC728B4EDC700810E59 /* ProximaNova-Extrabld.ttf */,
+				1C005BC828B4EDC700810E59 /* ProximaNovaT-Thin.ttf */,
+				1C005BC928B4EDC700810E59 /* ProximaNova-Regular.ttf */,
+				1C005BCA28B4EDC700810E59 /* ProximaNova-Black.ttf */,
+			);
+			path = "proxima-nova";
+			sourceTree = "<group>";
+		};
 		1C428E6B28B3673E00F11919 = {
 			isa = PBXGroup;
 			children = (
@@ -57,11 +89,13 @@
 		1C428E7628B3673E00F11919 /* GolferApplication */ = {
 			isa = PBXGroup;
 			children = (
+				1C005BD328B4EF9200810E59 /* Info.plist */,
 				1C428E7728B3673E00F11919 /* GolferApplicationApp.swift */,
 				1C428E7928B3673E00F11919 /* ContentView.swift */,
 				1CA88FC528B3AE8A003CDC8F /* GolfScreenView.swift */,
 				1CA88FC728B3B047003CDC8F /* NewView.swift */,
 				1C428E8528B367C400F11919 /* LaunchScreen.storyboard */,
+				1C005BC228B4EDC700810E59 /* proxima-nova */,
 				1C428E7B28B3674500F11919 /* Assets.xcassets */,
 				1C428E7D28B3674500F11919 /* Preview Content */,
 			);
@@ -134,8 +168,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C005BCC28B4EDC800810E59 /* ProximaNova-Light.ttf in Resources */,
+				1C005BD028B4EDC800810E59 /* ProximaNovaT-Thin.ttf in Resources */,
 				1C428E8628B367C500F11919 /* LaunchScreen.storyboard in Resources */,
+				1C005BCB28B4EDC800810E59 /* ProximaNova-Semibold-Italic.otf in Resources */,
+				1C005BCF28B4EDC800810E59 /* ProximaNova-Extrabld.ttf in Resources */,
 				1C428E7F28B3674500F11919 /* Preview Assets.xcassets in Resources */,
+				1C005BD228B4EDC800810E59 /* ProximaNova-Black.ttf in Resources */,
+				1C005BD128B4EDC800810E59 /* ProximaNova-Regular.ttf in Resources */,
+				1C005BCE28B4EDC800810E59 /* ProximaNova-Semibold.ttf in Resources */,
+				1C005BCD28B4EDC800810E59 /* ProximaNova-Bold.ttf in Resources */,
 				1C428E7C28B3674500F11919 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +324,7 @@
 				DEVELOPMENT_TEAM = Z7F6AJKUC8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GolferApplication/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -312,6 +355,7 @@
 				DEVELOPMENT_TEAM = Z7F6AJKUC8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GolferApplication/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
