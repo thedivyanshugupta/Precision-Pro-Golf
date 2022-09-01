@@ -11,6 +11,7 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
+            
             TabView {
                 VStack {
                     Image("green_logo")
@@ -106,7 +107,8 @@ struct ContentView: View {
            .indexViewStyle(.page(backgroundDisplayMode: .always ))
             
             Button("GET STARTED") {
-                NewView()
+//                NewView()
+                printFontFamilyName()
             }
             .padding()
             .font(Font.custom("ProximaNova-Bold", size: 14))
@@ -117,7 +119,7 @@ struct ContentView: View {
             
             Text("No Email Required")
 //            ProximaNova-Semibold-Italic.otf
-                .font(Font.custom("ProximaNova-Semibold-Italic", size: 14))
+                .font(Font.custom("ProximaNova-SemiboldIt", size: 14))
                 .foregroundColor(.gray)
 //                .font(.system(size: 15))
             
@@ -129,6 +131,12 @@ struct ContentView: View {
             .background(.white)
             .foregroundColor(.gray)
 //            .clipShape(Capsule())
+        }
+    }
+    func printFontFamilyName() {
+        for family in UIFont.familyNames.sorted() {
+            let names = UIFont.fontNames(forFamilyName: family)
+            print("Family: \(family) Font names: \(names)")
         }
     }
 }

@@ -7,6 +7,33 @@
 
 import SwiftUI
 
+extension Color {
+    init(hex: String) {
+        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int: UInt64 = 0
+        Scanner(string: hex).scanHexInt64(&int)
+        let a, r, g, b: UInt64
+        switch hex.count {
+        case 3: // RGB (12-bit)
+            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+        case 6: // RGB (24-bit)
+            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+        case 8: // ARGB (32-bit)
+            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        default:
+            (a, r, g, b) = (1, 1, 1, 0)
+        }
+
+        self.init(
+            .sRGB,
+            red: Double(r) / 255,
+            green: Double(g) / 255,
+            blue:  Double(b) / 255,
+            opacity: Double(a) / 255
+        )
+    }
+}
+
 enum Tab {
     case first
     case second
@@ -55,13 +82,13 @@ struct CustomTabView: View {
                 selectedTab = .first
             } label: {
                 VStack {
-                    Image(systemName: "house")
+                    Image("stats")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 25, height: 25)
                     Text("STATS")
                         .font(Font.custom("ProximaNova-Semibold", size: 12))
-                    
+                        .foregroundColor(Color(hex: "bababa"))
 //                        .foregroundColor(.primary)
                 }
                 .foregroundColor(selectedTab == .first ? .green : .primary)
@@ -72,13 +99,13 @@ struct CustomTabView: View {
                 selectedTab = .second
             } label: {
                 VStack {
-                    Image(systemName: "plus")
+                    Image("clubs")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 25, height: 25)
                     Text("CLUBS")
                         .font(Font.custom("ProximaNova-Semibold", size: 12))
-
+                        .foregroundColor(Color(hex: "bababa"))
 //                        .foregroundColor(.primary)
                 }
                 .foregroundColor(selectedTab == .second ? .green : .primary)
@@ -94,14 +121,14 @@ struct CustomTabView: View {
                             .foregroundColor(.white)
                             .frame(width: 55, height: 55)
                             .shadow(radius: 2)
-                        Image(systemName: "checkmark")
+                        Image("golf_tab_icon")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 25, height: 25)
+                            .frame(width: 55, height: 55)
                     }
                         Text("GOLF")
                             .font(Font.custom("ProximaNova-Semibold", size: 12))
-
+                            .foregroundColor(Color(hex: "bababa"))
 //                        .foregroundColor(.primary)
                 }
                 .foregroundColor(selectedTab == .third ? .green : .primary)
@@ -113,13 +140,13 @@ struct CustomTabView: View {
                 selectedTab = .fourth
             } label: {
                 VStack {
-                    Image(systemName: "circle")
+                    Image("record")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 25, height: 25)
                     Text("SCORE")
                         .font(Font.custom("ProximaNova-Semibold", size: 12))
-
+                        .foregroundColor(Color(hex: "bababa"))
 //                        .foregroundColor(.primary)
                 }
                 .foregroundColor(selectedTab == .fourth ? .green : .primary)
@@ -130,13 +157,13 @@ struct CustomTabView: View {
                 selectedTab = .fifth
             } label: {
                 VStack {
-                    Image(systemName: "triangle")
+                    Image("device_tab_icon")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 25, height: 25)
                     Text("DEVICES")
                         .font(Font.custom("ProximaNova-Semibold", size: 12))
-
+                        .foregroundColor(Color(hex: "bababa"))
 //                        .foregroundColor(.primary)
                 }
                 .foregroundColor(selectedTab == .fifth ? .green : .primary)
@@ -172,19 +199,22 @@ struct GolfView: View {
             Text("WHERE ARE YOU PLAYING?")
                 .padding()
                 .font(Font.custom("ProximaNova-Bold", size: 18))
+                .foregroundColor(Color(hex: "5d5d5d"))
             
             HStack {
                 Text("Avon Fields Golf Course")
-                    .padding()
+                    .padding([.leading, .trailing], 70)
                     .font(Font.custom("ProximaNova-Semibold", size: 15))
+                    .foregroundColor(Color(hex: "5d5d5d"))
+
                 
                 Image(systemName: "circle")
                     .padding()
             }
 //            .padding()
-//                .background(.red)
+//            .background(.red)
 //            .cornerRadius(15)
-            .background(Color.white.cornerRadius(15).shadow(color: Color.gray, radius: 5, x: 0, y: 0))
+            .background(Color.white.cornerRadius(15).shadow(color: Color(hex: "ededed"), radius: 5, x: 0, y: 0))
             .frame(width: .infinity, height: .infinity)
             
 
@@ -197,8 +227,12 @@ struct GolfView: View {
                 Text("Devices")
 //                    .padding()
                     .font(Font.custom("ProximaNova-Semibold", size: 15))
-                    .foregroundColor(.secondary)
+                    .foregroundColor(Color(hex: "b9b9b9"))
 
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
                 Spacer()
                 Spacer()
                 Spacer()
@@ -206,6 +240,8 @@ struct GolfView: View {
             
             
             HStack {
+//                Spacer()
+
                 Image("recon_hero_render")
                     .frame(width: 84, height: 84)
                     .padding()
@@ -213,23 +249,27 @@ struct GolfView: View {
                 VStack {
                     Text("R1 Smart")
                         .font(Font.custom("ProximaNova-Bold", size: 18))
+                        .foregroundColor(Color(hex: "5d5d5d"))
+
 //                        .padding()
 
                     Image("battery_not_connected")
 //                        .padding()
 
                 }
+                
                 VStack {
                     Image("bluetooth_not_connected")
 //                        .padding()
 
                     Text("No Connection")
                         .font(Font.custom("ProximaNova-Semibold", size: 12))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(Color(hex: "ededed"))
 //                        .padding()
                 }
             }
-            .background(Color.white.cornerRadius(25).shadow(color: Color.gray, radius: 5, x: 0, y: 0)            )
+            .padding([.leading, .trailing], 40)
+            .background(Color.white.cornerRadius(25).shadow(color: Color(hex: "ededed"), radius: 5, x: 0, y: 0)            )
             .frame(width: .infinity, height: .infinity)
             
             
@@ -241,6 +281,8 @@ struct GolfView: View {
                 VStack {
                     Text("S1 Smart")
                         .font(Font.custom("ProximaNova-Bold", size: 18))
+                        .foregroundColor(Color(hex: "5d5d5d"))
+
 //                        .padding()
 
                     Image("battery_not_connected")
@@ -253,13 +295,13 @@ struct GolfView: View {
 
                     Text("No Connection")
                         .font(Font.custom("ProximaNova-Semibold", size: 12))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(Color(hex: "ededed"))
 //                        .padding()
 
                 }
             }
-//            .padding()
-            .background(Color.white.cornerRadius(25).shadow(color: Color.gray, radius: 5, x: 0, y: 0)            )
+            .padding([.leading, .trailing], 40)
+            .background(Color.white.cornerRadius(25).shadow(color: Color(hex: "ededed"), radius: 5, x: 0, y: 0)            )
             .frame(width: .infinity, height: .infinity)
             
             
@@ -269,8 +311,8 @@ struct GolfView: View {
             }
             .padding()
             .font(Font.custom("ProximaNova-Bold", size: 14))
-            .frame(width: 303, height: 62)
-            .background(.green)
+            .frame(width: 360, height: 62)
+            .background(Color(hex: "7bc146"))
             .foregroundColor(.white)
             .clipShape(RoundedRectangle(cornerRadius: 16))
 
@@ -293,7 +335,7 @@ struct DevicesView: View {
         Color(.white)
             .ignoresSafeArea()
             .navigationTitle("DEVICES")
-        
+  
     }
 }
 
@@ -302,6 +344,8 @@ struct GolfScreenView_Previews: PreviewProvider {
         GolfScreenView()
     }
 }
+
+
 
 
 //        TabView {
