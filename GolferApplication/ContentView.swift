@@ -107,7 +107,7 @@ struct ContentView: View {
            .indexViewStyle(.page(backgroundDisplayMode: .always ))
             
             Button("GET STARTED") {
-//                NewView()
+                GolfScreenView()
                 printFontFamilyName()
             }
             .padding()
@@ -124,7 +124,7 @@ struct ContentView: View {
 //                .font(.system(size: 15))
             
             Button("Login") {
-                NewView()
+                GolfScreenView()
             }
             .padding()
             .font(Font.custom("ProximaNova-Bold", size: 14))

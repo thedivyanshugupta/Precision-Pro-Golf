@@ -82,16 +82,16 @@ struct CustomTabView: View {
                 selectedTab = .first
             } label: {
                 VStack {
-                    Image("stats")
+                    Image(selectedTab == .first ? "stats_selected" : "stats")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 25, height: 25)
+                        .frame(width: 30, height: 30)
                     Text("STATS")
                         .font(Font.custom("ProximaNova-Semibold", size: 12))
-                        .foregroundColor(Color(hex: "bababa"))
+//                        .foregroundColor(Color(hex: "bababa"))
 //                        .foregroundColor(.primary)
                 }
-                .foregroundColor(selectedTab == .first ? .green : .primary)
+                .foregroundColor(selectedTab == .first ? Color(hex: "7bc146") : Color(hex: "bababa"))
             }
             .padding()
             
@@ -99,16 +99,16 @@ struct CustomTabView: View {
                 selectedTab = .second
             } label: {
                 VStack {
-                    Image("clubs")
+                    Image(selectedTab == .second ? "clubs_selected" : "clubs")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 25, height: 25)
                     Text("CLUBS")
                         .font(Font.custom("ProximaNova-Semibold", size: 12))
-                        .foregroundColor(Color(hex: "bababa"))
+//                        .foregroundColor(Color(hex: "bababa"))
 //                        .foregroundColor(.primary)
                 }
-                .foregroundColor(selectedTab == .second ? .green : .primary)
+                .foregroundColor(selectedTab == .second ? Color(hex: "7bc146") : Color(hex: "bababa"))
             }
             .padding()
             
@@ -128,10 +128,10 @@ struct CustomTabView: View {
                     }
                         Text("GOLF")
                             .font(Font.custom("ProximaNova-Semibold", size: 12))
-                            .foregroundColor(Color(hex: "bababa"))
+//                            .foregroundColor(Color(hex: "bababa"))
 //                        .foregroundColor(.primary)
                 }
-                .foregroundColor(selectedTab == .third ? .green : .primary)
+                .foregroundColor(selectedTab == .third ? Color(hex: "7bc146") : Color(hex: "bababa"))
                 .offset(y: -12)
             }
             .padding()
@@ -140,16 +140,16 @@ struct CustomTabView: View {
                 selectedTab = .fourth
             } label: {
                 VStack {
-                    Image("record")
+                    Image(selectedTab == .fourth ? "record_selected" : "record")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 25, height: 25)
                     Text("SCORE")
                         .font(Font.custom("ProximaNova-Semibold", size: 12))
-                        .foregroundColor(Color(hex: "bababa"))
+//                        .foregroundColor(Color(hex: "bababa"))
 //                        .foregroundColor(.primary)
                 }
-                .foregroundColor(selectedTab == .fourth ? .green : .primary)
+                .foregroundColor(selectedTab == .fourth ? Color(hex: "7bc146") : Color(hex: "bababa"))
             }
             .padding()
             
@@ -157,19 +157,18 @@ struct CustomTabView: View {
                 selectedTab = .fifth
             } label: {
                 VStack {
-                    Image("device_tab_icon")
+                    Image(selectedTab == .fifth ? "device_tab_icon_selected" : "device_tab_icon")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 25, height: 25)
+                        .frame(width: 30, height: 30)
                     Text("DEVICES")
                         .font(Font.custom("ProximaNova-Semibold", size: 12))
-                        .foregroundColor(Color(hex: "bababa"))
+//                        .foregroundColor(Color(hex: "bababa"))
 //                        .foregroundColor(.primary)
                 }
-                .foregroundColor(selectedTab == .fifth ? .green : .primary)
+                .foregroundColor(selectedTab == .fifth ? Color(hex: "7bc146") : Color(hex: "bababa"))
             }
             .padding()
-            
         }
     }
 }
@@ -260,6 +259,9 @@ struct GolfView: View {
                 
                 VStack {
                     Image("bluetooth_not_connected")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40, height: 40)
 //                        .padding()
 
                     Text("No Connection")
@@ -291,6 +293,10 @@ struct GolfView: View {
                 
                 VStack {
                     Image("bluetooth_not_connected")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40, height: 40)
+                    
 //                        .padding()
 
                     Text("No Connection")
@@ -332,11 +338,57 @@ struct ScoreView: View {
 
 struct DevicesView: View {
     var body: some View {
-        Color(.white)
-            .ignoresSafeArea()
-            .navigationTitle("DEVICES")
-  
-    }
+        //        Color(.white)
+        //            .ignoresSafeArea()
+        //            .navigationTitle("DEVICES")
+                VStack {
+                    Text("Devices")
+                        .padding()
+                    
+                    HStack {
+                        VStack {
+                            Image("bluetooth")
+                            Spacer()
+                        }
+                        
+                        VStack {
+                            Image("recon_hero_render")
+                            Text("R1 Smart Rangefinder")
+                            Text("Connected")
+                        }
+                        
+                        VStack {
+                            Text("100%")
+                            Image("battery_not_connected")
+                            Spacer()
+
+                        }
+                    }
+                    .background(Color.white.cornerRadius(25).shadow(color: Color.gray, radius: 5, x: 0, y: 0)            )
+                    .frame(width: 302, height: 260)
+
+                    HStack {
+                        VStack {
+                            Image("bluetooth")
+                            Spacer()
+                        }
+                        
+                        VStack {
+                            Image("speaker_stock")
+                            Text("S1 Smart Speaker")
+                            Text("Connected")
+                        }
+                        
+                        VStack {
+                            Text("100%")
+                            Image("battery_not_connected")
+                            Spacer()
+                        }
+                    }
+                    .background(Color.white.cornerRadius(25).shadow(color: Color.gray, radius: 5, x: 0, y: 0)            )
+                    .frame(width: 302, height: 260)
+                }
+            }
 }
 
 struct GolfScreenView_Previews: PreviewProvider {
