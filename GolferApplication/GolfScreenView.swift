@@ -191,10 +191,10 @@ struct ClubsView: View {
 
 struct GolfView: View {
     var body: some View {
-//        Color(.white)
+//        Color(.blue)
 //            .ignoresSafeArea()
 //            .navigationTitle("Golf")
-        VStack {
+        VStack(spacing: 20) {
             Text("WHERE ARE YOU PLAYING?")
                 .padding()
                 .font(Font.custom("ProximaNova-Bold", size: 18))
@@ -271,7 +271,7 @@ struct GolfView: View {
                 }
             }
             .padding([.leading, .trailing], 40)
-            .background(Color.white.cornerRadius(25).shadow(color: Color(hex: "ededed"), radius: 5, x: 0, y: 0)            )
+            .background(Color.white.cornerRadius(25).shadow(color: Color(hex: "ededed"), radius: 5, x: 0, y: 0))
             .frame(width: .infinity, height: .infinity)
             
             
@@ -322,6 +322,7 @@ struct GolfView: View {
             .foregroundColor(.white)
             .clipShape(RoundedRectangle(cornerRadius: 16))
 
+            Spacer()
             
         }
     }
@@ -338,57 +339,100 @@ struct ScoreView: View {
 
 struct DevicesView: View {
     var body: some View {
-        //        Color(.white)
-        //            .ignoresSafeArea()
-        //            .navigationTitle("DEVICES")
-                VStack {
-                    Text("Devices")
-                        .padding()
+        ZStack {
+//            Color(.black)
+//            Color(Color(hex: "f4f4f4") as! CGColor)
+//                    .ignoresSafeArea()
+//            .navigationTitle("DEVICES")
+                VStack(spacing: 30) {
+                    Text("DEVICES")
+                        .font(Font.custom("ProximaNova-Bold", size: 18))
+//                        .padding()
                     
                     HStack {
                         VStack {
-                            Image("bluetooth")
+                            Image("bluetooth_green")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40)
+                                .padding()
                             Spacer()
                         }
                         
-                        VStack {
+                        VStack(spacing: 10) {
                             Image("recon_hero_render")
+//                                .resizable()
+//                                .scaledToFit()
+//                                .frame(width: 140, height: 140)
+                            
                             Text("R1 Smart Rangefinder")
+                                .font(Font.custom("ProximaNova-Bold", size: 17))
+                            
                             Text("Connected")
+                                .font(Font.custom("ProximaNova-Semibold", size: 14))
+                                .foregroundColor(Color(hex: "7bc146"))
                         }
                         
-                        VStack {
+                        VStack(spacing: -15) {
                             Text("100%")
-                            Image("battery_not_connected")
+                                .font(Font.custom("ProximaNova-Semibold", size: 14))
+                                .foregroundColor(Color(hex: "7bc146"))
+                                .padding()
+
+                            Image("battery_connected")
                             Spacer()
 
                         }
                     }
-                    .background(Color.white.cornerRadius(25).shadow(color: Color.gray, radius: 5, x: 0, y: 0)            )
-                    .frame(width: 302, height: 260)
+                    .background(Color.white.cornerRadius(25).shadow(color: Color(hex: "ededed"), radius: 5, x: 0, y: 0))
+                    .frame(width: 333, height: 260)
 
                     HStack {
                         VStack {
-                            Image("bluetooth")
+                            Image("bluetooth_green")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40)
+                                .padding()
                             Spacer()
                         }
                         
-                        VStack {
+                        VStack(spacing: 10) {
                             Image("speaker_stock")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 140, height: 140)
+                            
                             Text("S1 Smart Speaker")
+                                .font(Font.custom("ProximaNova-Bold", size: 16))
+                                
+
                             Text("Connected")
+                                .font(Font.custom("ProximaNova-Semibold", size: 14))
+                                .foregroundColor(Color(hex: "7bc146"))
+
+
                         }
                         
-                        VStack {
+                        VStack(spacing: -15) {
                             Text("100%")
-                            Image("battery_not_connected")
+                                .font(Font.custom("ProximaNova-Semibold", size: 14))
+                                .foregroundColor(Color(hex: "7bc146"))
+                                .padding()
+
+                            Image("battery_connected")
                             Spacer()
                         }
                     }
-                    .background(Color.white.cornerRadius(25).shadow(color: Color.gray, radius: 5, x: 0, y: 0)            )
-                    .frame(width: 302, height: 260)
+                    .background(Color.white.cornerRadius(25).shadow(color: Color(hex: "ededed"), radius: 5, x: 0, y: 0)            )
+                    .frame(width: 390, height: 300)
+                    Spacer()
                 }
+//                .ignoresSafeArea()
+//                .background(Color(hex: "f4f4f4").edgesIgnoringSafeArea(.all))
             }
+    }
+//        .background(Color(hex: "f4f4f4"))
 }
 
 struct GolfScreenView_Previews: PreviewProvider {
