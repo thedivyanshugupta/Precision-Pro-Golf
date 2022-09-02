@@ -11,7 +11,7 @@ import SwiftUI
 struct GolferApplicationApp: App {
     var body: some Scene {
         WindowGroup {
-            GolfScreenView()
+            ContentView()
             
         }
     }

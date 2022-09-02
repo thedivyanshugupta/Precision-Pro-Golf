@@ -99,7 +99,7 @@ struct CustomTabView: View {
                 selectedTab = .second
             } label: {
                 VStack {
-                    Image(selectedTab == .second ? "clubs_selected" : "clubs")
+                    Image(selectedTab == .second ? "clubs" : "clubs")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 25, height: 25)
@@ -310,7 +310,7 @@ struct GolfView: View {
             .background(Color.white.cornerRadius(25).shadow(color: Color(hex: "ededed"), radius: 5, x: 0, y: 0)            )
             .frame(width: .infinity, height: .infinity)
             
-            
+//            Spacer(maxLength: 10)
             
             Button("START ROUND") {
                 NewView()

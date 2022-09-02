@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showingGolfView = false
+
 
     var body: some View {
         VStack {
@@ -21,13 +23,14 @@ struct ContentView: View {
 
                     Text("Welcome to")
                         .font(Font.custom("ProximaNova-Bold", size: 22))
+                        .foregroundColor(Color(hex: "5d5d5d"))
                         .padding()
 
                     Text("View detailed course information, learn club distances, and measure progress so you can Hit More Greens.")
                         .font(Font.custom("ProximaNova-Semibold", size: 14))
                         .frame(width: 265, height: 53)
                         .multilineTextAlignment(.center)
-                        .foregroundColor(.gray)
+                        .foregroundColor(Color(hex: "a1a1a1"))
                         .padding()
                 }
                 
@@ -39,13 +42,15 @@ struct ContentView: View {
 
                     Text("View Detailed")
                         .font(Font.custom("ProximaNova-Bold", size: 22))
+                        .foregroundColor(Color(hex: "5d5d5d"))
+
 //                        .padding()
 
                     Text("Front, center, and back of the green. With 35,000+ golf courses, we’ve got you covered.")
                         .font(Font.custom("ProximaNova-Semibold", size: 14))
                         .frame(width: 265, height: 53)
                         .multilineTextAlignment(.center)
-                        .foregroundColor(.gray)
+                        .foregroundColor(Color(hex: "a1a1a1"))
 //                        .padding()
                 }
                 
@@ -57,14 +62,17 @@ struct ContentView: View {
 
                     Text("Learn Club Distances")
                         .font(Font.custom("ProximaNova-Bold", size: 22))
+                        .foregroundColor(Color(hex: "5d5d5d"))
+
 //                        .padding()
 
                     Text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.")
                         .font(Font.custom("ProximaNova-Semibold", size: 14))
                         .frame(width: 265, height: 53)
                         .multilineTextAlignment(.center)
-                        .foregroundColor(.red)
+                        .foregroundColor(Color(hex: "fb6d6d"))
 //                        .padding()
+                    
                 }
                 
                 VStack {
@@ -75,13 +83,15 @@ struct ContentView: View {
 
                     Text("Analyze Progress")
                         .font(Font.custom("ProximaNova-Bold", size: 22))
+                        .foregroundColor(Color(hex: "5d5d5d"))
+
 //                        .padding()
 
                     Text("See where you’re strong, where you’re weak, and what area you need to improve for lower scores.")
                         .font(Font.custom("ProximaNova-Semibold", size: 14))
                         .frame(width: 270, height: 53)
                         .multilineTextAlignment(.center)
-                        .foregroundColor(.gray)
+                        .foregroundColor(Color(hex: "a1a1a1"))
 //                        .padding()
                 }
                 
@@ -93,50 +103,51 @@ struct ContentView: View {
 
                     Text("Connect a Device")
                         .font(Font.custom("ProximaNova-Bold", size: 22))
+                        .foregroundColor(Color(hex: "5d5d5d"))
+
 //                        .padding()
 
                     Text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.")
                         .font(Font.custom("ProximaNova-Semibold", size: 14))
                         .frame(width: 265, height: 53)
                         .multilineTextAlignment(.center)
-                        .foregroundColor(.red)
+                        .foregroundColor(Color(hex: "fb6d6d"))
 //                        .padding()
                 }
             }
            .tabViewStyle(.page)
            .indexViewStyle(.page(backgroundDisplayMode: .always ))
             
-            Button("GET STARTED") {
-                GolfScreenView()
-                printFontFamilyName()
-            }
+            Button(action: {
+                showingGolfView = true
+            }, label: {
+                    Text("GET STARTED") })
             .padding()
             .font(Font.custom("ProximaNova-Bold", size: 14))
             .frame(width: 303, height: 62)
-            .background(.green)
-            .foregroundColor(.white)
+            .background(Color(hex: "7bc146"))
+            .foregroundColor(Color(hex: "ffffff"))
             .clipShape(RoundedRectangle(cornerRadius: 16))
             
             Text("No Email Required")
 //            ProximaNova-Semibold-Italic.otf
                 .font(Font.custom("ProximaNova-SemiboldIt", size: 14))
-                .foregroundColor(.gray)
+                .foregroundColor(Color(hex: "a1a1a1"))
 //                .font(.system(size: 15))
             
-            Button("Login") {
-                GolfScreenView()
-            }
+            Button(action: {
+                showingGolfView = true
+            }, label: {
+                    Text("LOG IN")            .underline()})
             .padding()
             .font(Font.custom("ProximaNova-Bold", size: 14))
             .background(.white)
-            .foregroundColor(.gray)
+            .foregroundColor(Color(hex: "a1a1a1"))
 //            .clipShape(Capsule())
         }
-    }
-    func printFontFamilyName() {
-        for family in UIFont.familyNames.sorted() {
-            let names = UIFont.fontNames(forFamilyName: family)
-            print("Family: \(family) Font names: \(names)")
+        .sheet(isPresented: $showingGolfView) {
+            GolfScreenView()
+            
         }
     }
 }
