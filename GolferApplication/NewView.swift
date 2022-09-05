@@ -19,8 +19,10 @@ struct NewView: View {
     }
 }
 
+
 struct NewView_Previews: PreviewProvider {
     static var previews: some View {
         NewView()
     }
 }
+

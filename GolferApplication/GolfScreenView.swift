@@ -78,16 +78,32 @@ struct CustomTabView: View {
     @Binding var selectedTab: Tab
     var body: some View {
         HStack {
+//            Color(.red)
+//                .ignoresSafeArea()
             Button {
                 selectedTab = .first
             } label: {
                 VStack {
+                    Spacer()
                     Image(selectedTab == .first ? "stats_selected" : "stats")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 30, height: 30)
-                    Text("STATS")
-                        .font(Font.custom("ProximaNova-Semibold", size: 12))
+                    
+                    Spacer(minLength: 3)
+
+                    
+                    if selectedTab == .first {
+                        Text("STATS")
+                            .underline()
+                            .font(Font.custom("ProximaNova-Semibold", size: 12))
+                    }
+                    else {
+                        Text("STATS")
+                            .font(Font.custom("ProximaNova-Semibold", size: 12))
+                        
+                    }
+                    
 //                        .foregroundColor(Color(hex: "bababa"))
 //                        .foregroundColor(.primary)
                 }
@@ -99,12 +115,25 @@ struct CustomTabView: View {
                 selectedTab = .second
             } label: {
                 VStack {
-                    Image(selectedTab == .second ? "clubs" : "clubs")
+                    Spacer()
+                    Image(selectedTab == .second ? "clubs_selected" : "clubs")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 25, height: 25)
-                    Text("CLUBS")
-                        .font(Font.custom("ProximaNova-Semibold", size: 12))
+                    
+                    Spacer(minLength: 8)
+
+                    
+                    if selectedTab == .second {
+                        Text("CLUBS")
+                            .underline()
+                            .font(Font.custom("ProximaNova-Semibold", size: 12))
+                    }
+                    else {
+                        Text("CLUBS")
+                            .font(Font.custom("ProximaNova-Semibold", size: 12))
+                        
+                    }
 //                        .foregroundColor(Color(hex: "bababa"))
 //                        .foregroundColor(.primary)
                 }
@@ -115,37 +144,65 @@ struct CustomTabView: View {
             Button {
                 selectedTab = .third
             } label: {
-                VStack {
+                VStack(spacing: -10) {
                     ZStack {
                         Circle()
                             .foregroundColor(.white)
-                            .frame(width: 55, height: 55)
-                            .shadow(radius: 2)
+                            .frame(width: 75, height: 75)
+//                            .shadow(radius: 2)
                         Image("golf_tab_icon")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 55, height: 55)
                     }
-                        Text("GOLF")
+                    Spacer(minLength: 20)
+
+                    
+                    if selectedTab == .third {
+                        Text(" GOLF")
+                            .underline()
                             .font(Font.custom("ProximaNova-Semibold", size: 12))
+                            .padding(-1)
+                    }
+                    else {
+                        Text(" GOLF")
+                            .font(Font.custom("ProximaNova-Semibold", size: 12))
+                            .padding(-1)
+                    }
+                        
 //                            .foregroundColor(Color(hex: "bababa"))
 //                        .foregroundColor(.primary)
                 }
-                .foregroundColor(selectedTab == .third ? Color(hex: "7bc146") : Color(hex: "bababa"))
-                .offset(y: -12)
+                .foregroundColor(selectedTab == .third ? Color(hex: "7bc146") : Color(hex: "7bc146"))
+                .offset(y: -17)
             }
             .padding()
+//            .clipShape(CShape())
             
             Button {
                 selectedTab = .fourth
+//                ContentView()
             } label: {
                 VStack {
+                    Spacer()
                     Image(selectedTab == .fourth ? "record_selected" : "record")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 25, height: 25)
-                    Text("SCORE")
-                        .font(Font.custom("ProximaNova-Semibold", size: 12))
+                    
+                    Spacer(minLength: 8)
+
+                    
+                    if selectedTab == .fourth {
+                        Text("SCORE")
+                            .underline()
+                            .font(Font.custom("ProximaNova-Semibold", size: 12))
+                    }
+                    else {
+                        Text("SCORE")
+                            .font(Font.custom("ProximaNova-Semibold", size: 12))
+                    }
+                    
 //                        .foregroundColor(Color(hex: "bababa"))
 //                        .foregroundColor(.primary)
                 }
@@ -157,12 +214,25 @@ struct CustomTabView: View {
                 selectedTab = .fifth
             } label: {
                 VStack {
+                    Spacer()
                     Image(selectedTab == .fifth ? "device_tab_icon_selected" : "device_tab_icon")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 30, height: 30)
-                    Text("DEVICES")
-                        .font(Font.custom("ProximaNova-Semibold", size: 12))
+                    
+                    Spacer(minLength: 3)
+
+                    
+                    if selectedTab == .fifth {
+                        Text("DEVICES")
+                            .underline()
+                            .font(Font.custom("ProximaNova-Semibold", size: 12))
+                    }
+                    else {
+                        Text("DEVICES")
+                            .font(Font.custom("ProximaNova-Semibold", size: 12))
+                        
+                    }
 //                        .foregroundColor(Color(hex: "bababa"))
 //                        .foregroundColor(.primary)
                 }
@@ -170,8 +240,28 @@ struct CustomTabView: View {
             }
             .padding()
         }
+        
+//        .clipShape(CShape())
     }
 }
+
+//struct CShape : Shape {
+//
+//    func path(in rect:CGRect) -> Path {
+//
+//        return Path { path in
+//
+//            path.move(to: CGPoint(x: 0, y: 35))
+//            path.addLine(to: CGPoint(x: 0, y: rect.height))
+//            path.addLine(to: CGPoint(x: rect.width, y: rect.height))
+//            path.addLine(to: CGPoint(x: rect.width, y: 35))
+//
+//            path.addArc(center: CGPoint(x: (rect.width / 2) - 8, y: 55), radius: 35, startAngle: .zero, endAngle: .init(degrees: 180), clockwise: true)
+//
+//        }
+//    }
+//}
+
 
 struct StatsView: View {
     var body: some View {
@@ -191,6 +281,7 @@ struct ClubsView: View {
 
 struct GolfView: View {
     var body: some View {
+//        ScrollView {
 //        Color(.blue)
 //            .ignoresSafeArea()
 //            .navigationTitle("Golf")
@@ -207,20 +298,18 @@ struct GolfView: View {
                     .foregroundColor(Color(hex: "5d5d5d"))
 
                 
-                Image(systemName: "circle")
-                    .padding()
+                Image("search_icon")
+                    .padding(20)
             }
 //            .padding()
 //            .background(.red)
 //            .cornerRadius(15)
-            .background(Color.white.cornerRadius(15).shadow(color: Color(hex: "ededed"), radius: 5, x: 0, y: 0))
+            .background(Color.white.cornerRadius(20).shadow(color: Color(hex: "ededed"), radius: 5, x: 0, y: 0))
             .frame(width: .infinity, height: .infinity)
-            
-
             
             HStack {
                 Spacer()
-                Image("bluetooth")
+                Image("bluetooth_icon")
 //                    .padding()
                 
                 Text("Devices")
@@ -313,7 +402,8 @@ struct GolfView: View {
 //            Spacer(maxLength: 10)
             
             Button("START ROUND") {
-                NewView()
+//                NewView()
+//                ContentView()
             }
             .padding()
             .font(Font.custom("ProximaNova-Bold", size: 14))
@@ -325,23 +415,28 @@ struct GolfView: View {
             Spacer()
             
         }
+        .background(Color.black.opacity(0.02))
     }
 }
+//}
 
 struct ScoreView: View {
     var body: some View {
         Color(.white)
             .ignoresSafeArea()
             .navigationTitle("SCORE")
+//        ContentView()
       
     }
 }
 
 struct DevicesView: View {
+    
     var body: some View {
-        ZStack {
-//            Color(.black)
-//            Color(Color(hex: "f4f4f4") as! CGColor)
+//        ZStack {
+        
+//            Color(Color.black.opacity(0.05))
+//////            Color(Color(hex: "f4f4f4") as! CGColor)
 //                    .ignoresSafeArea()
 //            .navigationTitle("DEVICES")
                 VStack(spacing: 30) {
@@ -357,7 +452,7 @@ struct DevicesView: View {
                                 .frame(width: 40, height: 40)
                                 .padding()
                             Spacer()
-                        }
+                    }
                         
                         VStack(spacing: 10) {
                             Image("recon_hero_render")
@@ -427,11 +522,16 @@ struct DevicesView: View {
                     .background(Color.white.cornerRadius(25).shadow(color: Color(hex: "ededed"), radius: 5, x: 0, y: 0)            )
                     .frame(width: 390, height: 300)
                     Spacer()
+                    Spacer()
                 }
+//                .background(Color.black.opacity(0.05))
 //                .ignoresSafeArea()
 //                .background(Color(hex: "f4f4f4").edgesIgnoringSafeArea(.all))
-            }
+//            }
+//        .background(Color.black.opacity(0.25))
+//        .ignoresSafeArea()
     }
+
 //        .background(Color(hex: "f4f4f4"))
 }
 

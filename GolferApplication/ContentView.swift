@@ -12,8 +12,8 @@ struct ContentView: View {
 
 
     var body: some View {
+        NavigationView {
         VStack {
-            
             TabView {
                 VStack {
                     Image("green_logo")
@@ -25,6 +25,11 @@ struct ContentView: View {
                         .font(Font.custom("ProximaNova-Bold", size: 22))
                         .foregroundColor(Color(hex: "5d5d5d"))
                         .padding()
+                    
+                    Text("Precision Pro Golf")
+                        .font(Font.custom("ProximaNova-Bold", size: 22))
+                        .foregroundColor(Color(hex: "5d5d5d"))
+                        .padding(-20)
 
                     Text("View detailed course information, learn club distances, and measure progress so you can Hit More Greens.")
                         .font(Font.custom("ProximaNova-Semibold", size: 14))
@@ -43,8 +48,7 @@ struct ContentView: View {
                     Text("View Detailed")
                         .font(Font.custom("ProximaNova-Bold", size: 22))
                         .foregroundColor(Color(hex: "5d5d5d"))
-
-//                        .padding()
+                        .padding()
 
                     Text("Front, center, and back of the green. With 35,000+ golf courses, we’ve got you covered.")
                         .font(Font.custom("ProximaNova-Semibold", size: 14))
@@ -115,8 +119,8 @@ struct ContentView: View {
 //                        .padding()
                 }
             }
-           .tabViewStyle(.page)
-           .indexViewStyle(.page(backgroundDisplayMode: .always ))
+            .tabViewStyle(.page)
+            .indexViewStyle(.page(backgroundDisplayMode: .always))
             
             Button(action: {
                 showingGolfView = true
@@ -128,8 +132,27 @@ struct ContentView: View {
             .background(Color(hex: "7bc146"))
             .foregroundColor(Color(hex: "ffffff"))
             .clipShape(RoundedRectangle(cornerRadius: 16))
+//
+//            NavigationLink(destination: GolfScreenView()) {
+//                Text("GET STARTED")
+//                    .padding()
+//                    .font(Font.custom("ProximaNova-Bold", size: 14))
+//                    .frame(width: 303, height: 62)
+//                    .background(Color(hex: "7bc146"))
+//                    .foregroundColor(Color(hex: "ffffff"))
+//                    .clipShape(RoundedRectangle(cornerRadius: 16))
+//
+//            }
+//            .navigationBarTitle("")
+//            .navigationBarHidden(true)
+//            .navigationBarBackButtonHidden(true)
+
+
             
             Text("No Email Required")
+                .onTapGesture {
+                    GolfScreenView()
+                }
 //            ProximaNova-Semibold-Italic.otf
                 .font(Font.custom("ProximaNova-SemiboldIt", size: 14))
                 .foregroundColor(Color(hex: "a1a1a1"))
@@ -138,18 +161,22 @@ struct ContentView: View {
             Button(action: {
                 showingGolfView = true
             }, label: {
-                    Text("LOG IN")            .underline()})
+                    Text("LOG IN").underline()})
             .padding()
             .font(Font.custom("ProximaNova-Bold", size: 14))
             .background(.white)
             .foregroundColor(Color(hex: "a1a1a1"))
 //            .clipShape(Capsule())
         }
-        .sheet(isPresented: $showingGolfView) {
+//        .background(Color.gray)
+        .fullScreenCover(isPresented: $showingGolfView) {
+//            isModalInPresentation = true
             GolfScreenView()
-            
+
         }
+    
     }
+}
 }
 
 struct ContentView_Previews: PreviewProvider {
