@@ -9,12 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showingGolfView = false
-
+    @State var currentIndex = 0
+    @State private var currentPage = 1
 
     var body: some View {
         NavigationView {
         VStack {
-            TabView {
+            TabView(selection: $currentIndex) {
                 VStack {
                     Image("green_logo")
                         .resizable()
@@ -38,6 +39,7 @@ struct ContentView: View {
                         .foregroundColor(Color(hex: "a1a1a1"))
                         .padding()
                 }
+                .tag(1)
                 
                 VStack {
                     Image("onboarding_2")
@@ -57,7 +59,8 @@ struct ContentView: View {
                         .foregroundColor(Color(hex: "a1a1a1"))
 //                        .padding()
                 }
-                
+                .tag(2)
+
                 VStack {
                     Image("onboarding_3")
                         .resizable()
@@ -76,8 +79,9 @@ struct ContentView: View {
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color(hex: "fb6d6d"))
 //                        .padding()
-                    
                 }
+                .tag(3)
+
                 
                 VStack {
                     Image("onboarding_4")
@@ -98,6 +102,8 @@ struct ContentView: View {
                         .foregroundColor(Color(hex: "a1a1a1"))
 //                        .padding()
                 }
+                .tag(4)
+
                 
                 VStack {
                     Image("onboarding_5")
@@ -108,7 +114,6 @@ struct ContentView: View {
                     Text("Connect a Device")
                         .font(Font.custom("ProximaNova-Bold", size: 22))
                         .foregroundColor(Color(hex: "5d5d5d"))
-
 //                        .padding()
 
                     Text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.")
@@ -118,9 +123,47 @@ struct ContentView: View {
                         .foregroundColor(Color(hex: "fb6d6d"))
 //                        .padding()
                 }
+                .tag(5)
             }
+//            .foregroundColor(Color.black)
+//                    .tabViewStyle(PageTabViewStyle())
+//                    .background(Color.black.opacity(0.5))
+//            .tabViewStyle(.page(indexDisplayMode: .always))
             .tabViewStyle(.page)
-            .indexViewStyle(.page(backgroundDisplayMode: .always))
+            .indexViewStyle(.page(backgroundDisplayMode: .never))
+            .onChange(of: currentIndex) { newValue in
+                currentPage = newValue
+                print("New page: \(newValue)")
+            }
+            
+            HStack {
+                Circle()
+                    .foregroundColor(currentPage == 1 ? Color(hex: "7bc146") : Color(hex: "ededed"))
+                   .frame(width: 8, height: 8)
+                Circle()
+                    .foregroundColor(currentPage == 2 ? Color(hex: "7bc146") : Color(hex: "ededed"))
+                   .frame(width: 8, height: 8)
+                Circle()
+                    .foregroundColor(currentPage == 3 ? Color(hex: "7bc146") : Color(hex: "ededed"))
+                   .frame(width: 8, height: 8)
+                Circle()
+                    .foregroundColor(currentPage == 4 ? Color(hex: "7bc146") : Color(hex: "ededed"))
+                   .frame(width: 8, height: 8)
+                Circle()
+                    .foregroundColor(currentPage == 5 ? Color(hex: "7bc146") : Color(hex: "ededed"))
+                   .frame(width: 8, height: 8)
+            }
+//            Spacer(minLength: 20)
+//            Spacer(minLength: 20)
+//            Spacer(minLength: 20)
+            Spacer()
+            Spacer()
+            Spacer()
+            Spacer()
+            Spacer()
+//            Spacer()
+//            Spacer()
+            
             
             Button(action: {
                 showingGolfView = true
@@ -168,7 +211,7 @@ struct ContentView: View {
             .foregroundColor(Color(hex: "a1a1a1"))
 //            .clipShape(Capsule())
         }
-//        .background(Color.gray)
+        .background(Color.white)
         .fullScreenCover(isPresented: $showingGolfView) {
 //            isModalInPresentation = true
             GolfScreenView()
