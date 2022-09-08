@@ -60,6 +60,7 @@ struct CustomTabView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 30, height: 30)
+                        .padding(.leading, 2)
                     
                     Spacer(minLength: 3)
 
@@ -67,17 +68,18 @@ struct CustomTabView: View {
                         Text("STATS")
                             .underline()
                             .font(Font.custom("ProximaNova-Semibold", size: 12))
+                            .padding(.leading, 2)
                     }
                     else {
                         Text("STATS")
                             .font(Font.custom("ProximaNova-Semibold", size: 12))
-                        
+                            .padding(.leading, 2)
                     }
                 }
                 .foregroundColor(selectedTab == .first ? Color(hex: "7bc146") : Color(hex: "bababa"))
             }
-            .padding()
-            
+            .padding(.bottom, 8)
+
             Button {
                 selectedTab = .second
             } label: {
@@ -87,24 +89,27 @@ struct CustomTabView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 25, height: 25)
-                    
+                        .padding(.leading, 18)
+
                     Spacer(minLength: 8)
 
                     if selectedTab == .second {
                         Text("CLUBS")
                             .underline()
                             .font(Font.custom("ProximaNova-Semibold", size: 12))
+                            .padding(.leading, 18)
+
                     }
                     else {
                         Text("CLUBS")
                             .font(Font.custom("ProximaNova-Semibold", size: 12))
-                        
+                            .padding(.leading, 18)
                     }
                 }
                 .foregroundColor(selectedTab == .second ? Color(hex: "7bc146") : Color(hex: "bababa"))
             }
-            .padding()
-            
+            .padding(.bottom, 8)
+
             Button {
                 selectedTab = .third
             } label: {
@@ -129,12 +134,12 @@ struct CustomTabView: View {
                         Text(" GOLF")
                             .underline()
                             .font(Font.custom("ProximaNova-Semibold", size: 12))
-                            .padding(-1)
+                            .padding(.top, -8)
                     }
                     else {
                         Text(" GOLF")
                             .font(Font.custom("ProximaNova-Semibold", size: 12))
-                            .padding(-1)
+                            .padding(.top, -8)
                     }
                 }
                 .foregroundColor(selectedTab == .third ? Color(hex: "7bc146") : Color(hex: "bababa"))
@@ -151,23 +156,28 @@ struct CustomTabView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 25, height: 25)
-                    
+                        .padding(.trailing, 18)
+
                     Spacer(minLength: 8)
                     
                     if selectedTab == .fourth {
                         Text("SCORE")
                             .underline()
                             .font(Font.custom("ProximaNova-Semibold", size: 12))
+                            .padding(.trailing, 18)
+
                     }
                     else {
                         Text("SCORE")
                             .font(Font.custom("ProximaNova-Semibold", size: 12))
+                            .padding(.trailing, 18)
+
                     }
                 }
                 .foregroundColor(selectedTab == .fourth ? Color(hex: "7bc146") : Color(hex: "bababa"))
             }
-            .padding()
-            
+            .padding(.bottom, 8)
+
             Button {
                 selectedTab = .fifth
             } label: {
@@ -178,6 +188,8 @@ struct CustomTabView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 30, height: 30)
+                        .padding(.trailing, 2)
+
                     
                     Spacer(minLength: 3)
 
@@ -185,15 +197,19 @@ struct CustomTabView: View {
                         Text("DEVICES")
                             .underline()
                             .font(Font.custom("ProximaNova-Semibold", size: 12))
+                            .padding(.trailing, 2)
+
                     }
                     else {
                         Text("DEVICES")
                             .font(Font.custom("ProximaNova-Semibold", size: 12))
+                            .padding(.trailing, 2)
+
                     }
                 }
                 .foregroundColor(selectedTab == .fifth ? Color(hex: "7bc146") : Color(hex: "bababa"))
             }
-            .padding()
+            .padding(.bottom, 8)
         }
         .frame(width: 500, height: 60)
         .background((Color(hex: "ffffff")).shadow(color: Color(hex: "0d000000"), radius: 5, x: 0, y: 0))

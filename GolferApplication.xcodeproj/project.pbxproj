@@ -123,9 +123,9 @@
 			children = (
 				1C428E7928B3673E00F11919 /* ContentView.swift */,
 				1CA88FC528B3AE8A003CDC8F /* SecondScreenView.swift */,
-				1CBAD55D28C8B3F100E06B6E /* OtherView.swift */,
 				1CBAD55B28C8ADF800E06B6E /* GolfView.swift */,
 				1CBAD55928C8A8C400E06B6E /* DevicesView.swift */,
+				1CBAD55D28C8B3F100E06B6E /* OtherView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

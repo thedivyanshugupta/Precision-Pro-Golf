@@ -10,7 +10,7 @@ import SwiftUI
 struct GolfView: View {
     var body: some View {
 
-        VStack(spacing: 20) {
+        VStack(spacing: 10) {
             
             Text("WHERE ARE YOU PLAYING?")
                 .padding()
@@ -19,7 +19,7 @@ struct GolfView: View {
             
             HStack {
                 Text("Avon Fields Golf Course")
-                    .padding([.leading, .trailing], 70)
+                    .padding([.leading, .trailing], 50)
                     .font(Font.custom("ProximaNova-Semibold", size: 15))
                     .foregroundColor(Color(hex: "5d5d5d"))
 
@@ -46,14 +46,16 @@ struct GolfView: View {
                 Spacer()
                 Spacer()
             }
+            .padding(.top, 10)
             
             HStack {
                 Image("recon_hero_render")
                     .frame(width: 84, height: 84)
+                    .propotionalFrame(width: 0.13, height: 0.09)
                     .padding()
 
                 VStack {
-                    Text("R1 Smart")
+                    Text(" R1 Smart")
                         .font(Font.custom("ProximaNova-Bold", size: 18))
                         .foregroundColor(Color(hex: "5d5d5d"))
 
@@ -73,11 +75,12 @@ struct GolfView: View {
             }
             .padding([.leading, .trailing], 40)
             .background(Color.white.cornerRadius(25).shadow(color: Color(hex: "ededed"), radius: 5, x: 0, y: 0))
-            .frame(width: .infinity, height: .infinity)
-                        
+            .propotionalFrame(width: 0.9, height: 0.15 )
+
             HStack {
                 Image("speaker_stock")
                     .frame(width: 84, height: 84)
+                    .propotionalFrame(width: 0.12, height: 0.12)
                     .padding()
 
                 VStack {
@@ -93,6 +96,7 @@ struct GolfView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 40, height: 40)
+                        
                     
                     Text("No Connection")
                         .font(Font.custom("ProximaNova-Semibold", size: 12))
@@ -102,13 +106,14 @@ struct GolfView: View {
             }
             .padding([.leading, .trailing], 40)
             .background(Color.white.cornerRadius(25).shadow(color: Color(hex: "ededed"), radius: 5, x: 0, y: 0)            )
-            .frame(width: .infinity, height: .infinity)
-                        
+            .propotionalFrame(width: 0.9, height: 0.15)
+//            .padding(.top, -20)
+
             Button("START ROUND") {
             }
             .padding()
             .font(Font.custom("ProximaNova-Bold", size: 14))
-            .frame(width: 360, height: 62)
+            .frame(width: 320, height: 62)
             .background(Color(hex: "7bc146"))
             .foregroundColor(.white)
             .clipShape(RoundedRectangle(cornerRadius: 16))

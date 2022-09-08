@@ -13,4 +13,7 @@ struct Tab: Identifiable, Hashable {
     var title: String
     var text: String
     var index: Int
+    var imageWidth: Double
+    var imageHeight: Double
+
 }
