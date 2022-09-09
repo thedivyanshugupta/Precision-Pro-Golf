@@ -21,7 +21,7 @@
 		1C428E7F28B3674500F11919 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C428E7E28B3674500F11919 /* Preview Assets.xcassets */; };
 		1C428E8628B367C500F11919 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C428E8528B367C400F11919 /* LaunchScreen.storyboard */; };
 		1CA88FC628B3AE8A003CDC8F /* SecondScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA88FC528B3AE8A003CDC8F /* SecondScreenView.swift */; };
-		1CBAD55828C892C000E06B6E /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBAD55728C892C000E06B6E /* ColorExtension.swift */; };
+		1CBAD55828C892C000E06B6E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBAD55728C892C000E06B6E /* Extensions.swift */; };
 		1CBAD55A28C8A8C400E06B6E /* DevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBAD55928C8A8C400E06B6E /* DevicesView.swift */; };
 		1CBAD55C28C8ADF800E06B6E /* GolfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBAD55B28C8ADF800E06B6E /* GolfView.swift */; };
 		1CBAD55E28C8B3F100E06B6E /* OtherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBAD55D28C8B3F100E06B6E /* OtherView.swift */; };
@@ -45,7 +45,7 @@
 		1C428E7E28B3674500F11919 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1C428E8528B367C400F11919 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CA88FC528B3AE8A003CDC8F /* SecondScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenView.swift; sourceTree = "<group>"; };
-		1CBAD55728C892C000E06B6E /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		1CBAD55728C892C000E06B6E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1CBAD55928C8A8C400E06B6E /* DevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesView.swift; sourceTree = "<group>"; };
 		1CBAD55B28C8ADF800E06B6E /* GolfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GolfView.swift; sourceTree = "<group>"; };
 		1CBAD55D28C8B3F100E06B6E /* OtherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherView.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 				1C428E7728B3673E00F11919 /* GolferApplicationApp.swift */,
 				1CBAD56228C8E5CE00E06B6E /* Models */,
 				1CBAD56128C8E10B00E06B6E /* Views */,
-				1CBAD55728C892C000E06B6E /* ColorExtension.swift */,
+				1CBAD55728C892C000E06B6E /* Extensions.swift */,
 				1C428E8528B367C400F11919 /* LaunchScreen.storyboard */,
 				1C005BC228B4EDC700810E59 /* proxima-nova */,
 				1C428E7B28B3674500F11919 /* Assets.xcassets */,
@@ -219,7 +219,7 @@
 			files = (
 				1CBAD55C28C8ADF800E06B6E /* GolfView.swift in Sources */,
 				1CBAD55A28C8A8C400E06B6E /* DevicesView.swift in Sources */,
-				1CBAD55828C892C000E06B6E /* ColorExtension.swift in Sources */,
+				1CBAD55828C892C000E06B6E /* Extensions.swift in Sources */,
 				1CA88FC628B3AE8A003CDC8F /* SecondScreenView.swift in Sources */,
 				1CBAD55E28C8B3F100E06B6E /* OtherView.swift in Sources */,
 				1CBAD56028C8C66900E06B6E /* Tab.swift in Sources */,

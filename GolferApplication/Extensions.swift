@@ -24,7 +24,7 @@ extension Color {
             (a, r, g, b) = (1, 1, 1, 0)
         }
 
-        self.init(
+        self.init (
             .sRGB,
             red: Double(r) / 255,
             green: Double(g) / 255,
