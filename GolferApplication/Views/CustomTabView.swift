@@ -1,62 +1,24 @@
 //
-//  GolfScreenView.swift
+//  CustomTabView.swift
 //  GolferApplication
 //
-//  Created by Roro on 8/22/22.
+//  Created by Roro on 9/9/22.
 //
 
 import SwiftUI
-
-enum Tabs {
-    case first
-    case second
-    case third
-    case fourth
-    case fifth
-}
-
-struct GolfScreenView: View {
-    @State private var selectedTab: Tabs = .third
-    var body: some View {
-        VStack {
-            switch selectedTab {
-            case .first:
-                NavigationView {
-                    StatsView()
-                }
-            case .second:
-                NavigationView {
-                    ClubsView()
-                }
-            case .third:
-                NavigationView {
-                    GolfView()
-                }
-            case .fourth:
-                NavigationView {
-                    ScoreView()
-                }
-            case .fifth:
-                NavigationView {
-                    DevicesView()
-                }
-            }
-            CustomTabView(selectedTab: $selectedTab)
-                .frame(height: 50)
-        }
-    }
-}
 
 struct CustomTabView: View {
     @Binding var selectedTab: Tabs
     var body: some View {
         HStack(spacing: 1) {
             Button {
-                selectedTab = .first
+                selectedTab = .stats
             } label: {
                 VStack {
+                    
                     Spacer()
-                    Image(selectedTab == .first ? "stats_selected" : "stats")
+                    
+                    Image(selectedTab == .stats ? "stats_selected" : "stats")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 30, height: 30)
@@ -64,7 +26,7 @@ struct CustomTabView: View {
                     
                     Spacer(minLength: 3)
 
-                    if selectedTab == .first {
+                    if selectedTab == .stats {
                         Text("STATS")
                             .underline()
                             .font(Font.custom("ProximaNova-Semibold", size: 12))
@@ -76,16 +38,17 @@ struct CustomTabView: View {
                             .padding(.leading, 2)
                     }
                 }
-                .foregroundColor(selectedTab == .first ? Color(hex: "7bc146") : Color(hex: "bababa"))
+                .foregroundColor(selectedTab == .stats ? Color(hex: "7bc146") : Color(hex: "bababa"))
             }
             .padding(.bottom, 8)
 
             Button {
-                selectedTab = .second
+                selectedTab = .clubs
             } label: {
                 VStack {
                     Spacer()
-                    Image(selectedTab == .second ? "clubs_selected" : "clubs")
+                    
+                    Image(selectedTab == .clubs ? "clubs_selected" : "clubs")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 25, height: 25)
@@ -93,12 +56,11 @@ struct CustomTabView: View {
 
                     Spacer(minLength: 8)
 
-                    if selectedTab == .second {
+                    if selectedTab == .clubs {
                         Text("CLUBS")
                             .underline()
                             .font(Font.custom("ProximaNova-Semibold", size: 12))
                             .padding(.leading, 18)
-
                     }
                     else {
                         Text("CLUBS")
@@ -106,12 +68,12 @@ struct CustomTabView: View {
                             .padding(.leading, 18)
                     }
                 }
-                .foregroundColor(selectedTab == .second ? Color(hex: "7bc146") : Color(hex: "bababa"))
+                .foregroundColor(selectedTab == .clubs ? Color(hex: "7bc146") : Color(hex: "bababa"))
             }
             .padding(.bottom, 8)
 
             Button {
-                selectedTab = .third
+                selectedTab = .golf
             } label: {
                 VStack(spacing: -10) {
                     ZStack {
@@ -130,7 +92,7 @@ struct CustomTabView: View {
                     
                     Spacer(minLength: 10)
 
-                    if selectedTab == .third {
+                    if selectedTab == .golf {
                         Text(" GOLF")
                             .underline()
                             .font(Font.custom("ProximaNova-Semibold", size: 12))
@@ -142,17 +104,17 @@ struct CustomTabView: View {
                             .padding(.top, -8)
                     }
                 }
-                .foregroundColor(selectedTab == .third ? Color(hex: "7bc146") : Color(hex: "bababa"))
+                .foregroundColor(selectedTab == .golf ? Color(hex: "7bc146") : Color(hex: "bababa"))
                 .offset(y: -17)
             }
             .padding()
             
             Button {
-                selectedTab = .fourth
+                selectedTab = .score
             } label: {
                 VStack {
                     Spacer()
-                    Image(selectedTab == .fourth ? "record_selected" : "record")
+                    Image(selectedTab == .score ? "record_selected" : "record")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 25, height: 25)
@@ -160,64 +122,53 @@ struct CustomTabView: View {
 
                     Spacer(minLength: 8)
                     
-                    if selectedTab == .fourth {
+                    if selectedTab == .score {
                         Text("SCORE")
                             .underline()
                             .font(Font.custom("ProximaNova-Semibold", size: 12))
                             .padding(.trailing, 18)
-
                     }
                     else {
                         Text("SCORE")
                             .font(Font.custom("ProximaNova-Semibold", size: 12))
                             .padding(.trailing, 18)
-
                     }
                 }
-                .foregroundColor(selectedTab == .fourth ? Color(hex: "7bc146") : Color(hex: "bababa"))
+                .foregroundColor(selectedTab == .score ? Color(hex: "7bc146") : Color(hex: "bababa"))
             }
             .padding(.bottom, 8)
 
             Button {
-                selectedTab = .fifth
+                selectedTab = .devices
             } label: {
                 VStack {
                     Spacer()
                     
-                    Image(selectedTab == .fifth ? "device_tab_icon_selected" : "device_tab_icon")
+                    Image(selectedTab == .devices ? "device_tab_icon_selected" : "device_tab_icon")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 30, height: 30)
                         .padding(.trailing, 2)
 
-                    
                     Spacer(minLength: 3)
 
-                    if selectedTab == .fifth {
+                    if selectedTab == .devices {
                         Text("DEVICES")
                             .underline()
                             .font(Font.custom("ProximaNova-Semibold", size: 12))
                             .padding(.trailing, 2)
-
                     }
                     else {
                         Text("DEVICES")
                             .font(Font.custom("ProximaNova-Semibold", size: 12))
                             .padding(.trailing, 2)
-
                     }
                 }
-                .foregroundColor(selectedTab == .fifth ? Color(hex: "7bc146") : Color(hex: "bababa"))
+                .foregroundColor(selectedTab == .devices ? Color(hex: "7bc146") : Color(hex: "bababa"))
             }
             .padding(.bottom, 8)
         }
         .frame(width: 500, height: 60)
         .background((Color(hex: "ffffff")).shadow(color: Color(hex: "0d000000"), radius: 5, x: 0, y: 0))
-    }
-}
-
-struct GolfScreenView_Previews: PreviewProvider {
-    static var previews: some View {
-        GolfScreenView()
     }
 }

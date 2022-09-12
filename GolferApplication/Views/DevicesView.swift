@@ -10,7 +10,6 @@ import SwiftUI
 struct DevicesView: View {
     
     var body: some View {
-//        ScrollView {
         
        VStack(spacing: 30) {
            
@@ -24,6 +23,7 @@ struct DevicesView: View {
                         .scaledToFit()
                         .frame(width: 40, height: 40)
                         .padding()
+                    
                     Spacer()
                 }
                 
@@ -49,7 +49,6 @@ struct DevicesView: View {
                 }
             }
             .background(Color.white.cornerRadius(25).shadow(color: Color(hex: "ededed"), radius: 5, x: 0, y: 0))
-//            .frame(width: 333, height: 260)
             .propotionalFrame(width: 0.9, height: 0.3 )
 
             HStack {
@@ -89,7 +88,6 @@ struct DevicesView: View {
                 }
             }
             .background(Color.white.cornerRadius(25).shadow(color: Color(hex: "ededed"), radius: 5, x: 0, y: 0)            )
-//            .frame(width: 390, height: 300)
             .propotionalFrame(width: 0.92, height: 0.3 )
 
             Text("")
@@ -100,7 +98,6 @@ struct DevicesView: View {
         }
         .background(Color.black.opacity(0.05))
     }
-//    }
 }
 
 

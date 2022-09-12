@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var tabs: [Tab] = [
-        Tab(image: "green_logo", title: "Welcome to", text: "View detailed course information, learn club distances, and measure progress so you can Hit More Greens.", index: 1, imageWidth: 0.33, imageHeight: 0.2),
-        Tab(image: "onboarding_2", title: "View Detailed", text: "Front, center, and back of the green. With 35,000+ golf courses, we’ve got you covered.", index: 2, imageWidth: 0.560, imageHeight: 0.350),
-        Tab(image: "onboarding_3", title: "Learn Club Distances", text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.", index: 3, imageWidth: 0.602, imageHeight: 0.340),
-        Tab(image: "onboarding_4", title: "Analyze Progress", text: "See where you’re strong, where you’re weak, and what area you need to improve for lower scores.", index: 4, imageWidth: 0.586, imageHeight: 0.356),
-        Tab(image: "onboarding_5", title: "Connect a Device", text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.", index: 5, imageWidth: 0.592, imageHeight: 0.352),
+    @State var onboardingTabs: [TabDetails] = [
+        TabDetails(image: "green_logo", title: "Welcome to", text: "View detailed course information, learn club distances, and measure progress so you can Hit More Greens.", index: 1, imageWidth: 0.33, imageHeight: 0.2),
+        TabDetails(image: "onboarding_2", title: "View Detailed", text: "Front, center, and back of the green. With 35,000+ golf courses, we’ve got you covered.", index: 2, imageWidth: 0.560, imageHeight: 0.350),
+        TabDetails(image: "onboarding_3", title: "Learn Club Distances", text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.", index: 3, imageWidth: 0.602, imageHeight: 0.340),
+        TabDetails(image: "onboarding_4", title: "Analyze Progress", text: "See where you’re strong, where you’re weak, and what area you need to improve for lower scores.", index: 4, imageWidth: 0.586, imageHeight: 0.356),
+        TabDetails(image: "onboarding_5", title: "Connect a Device", text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.", index: 5, imageWidth: 0.592, imageHeight: 0.352),
     ]
     @State private var showingGolfView = false
     @State var currentIndex = 0
@@ -22,14 +22,13 @@ struct ContentView: View {
     var body: some View {
         VStack {
             TabView(selection: $currentIndex) {
-                ForEach(tabs) { tab in
+                ForEach(onboardingTabs) { tab in
                     VStack {
-//                        Spacer(minLength: 1)
+
                         Image(tab.image)
                             .resizable()
                             .scaledToFit()
                             .propotionalFrame(width: tab.imageWidth, height: tab.imageHeight)
-
                         
                         Text(tab.title)
                             .font(Font.custom("ProximaNova-Bold", size: 22))
@@ -60,11 +59,9 @@ struct ContentView: View {
                        .frame(width: 10, height: 10)
                 }
             }
-            Spacer(minLength: 70)
-//            Spacer()
-//            Spacer()
-//            Spacer()
             
+            Spacer(minLength: 70)
+
             Button(action: {
                 showingGolfView = true
             }, label: {
@@ -76,7 +73,6 @@ struct ContentView: View {
             .foregroundColor(Color(hex: "ffffff"))
             .clipShape(RoundedRectangle(cornerRadius: 16))
 
-            
             Text("No Email Required")
                 .onTapGesture {
                 }

@@ -27,7 +27,6 @@ struct GolfView: View {
                     .padding(20)
             }
             .background(Color.white.cornerRadius(20).shadow(color: Color(hex: "ededed"), radius: 5, x: 0, y: 0))
-            .frame(width: .infinity, height: .infinity)
             
             HStack {
                 Spacer()
@@ -96,7 +95,6 @@ struct GolfView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 40, height: 40)
-                        
                     
                     Text("No Connection")
                         .font(Font.custom("ProximaNova-Semibold", size: 12))
@@ -107,7 +105,6 @@ struct GolfView: View {
             .padding([.leading, .trailing], 40)
             .background(Color.white.cornerRadius(25).shadow(color: Color(hex: "ededed"), radius: 5, x: 0, y: 0)            )
             .propotionalFrame(width: 0.9, height: 0.15)
-//            .padding(.top, -20)
 
             Button("START ROUND") {
             }
@@ -119,7 +116,6 @@ struct GolfView: View {
             .clipShape(RoundedRectangle(cornerRadius: 16))
 
             Spacer()
-            
         }
         .background(Color.black.opacity(0.02))
     }

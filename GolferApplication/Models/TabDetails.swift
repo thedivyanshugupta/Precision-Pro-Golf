@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct Tab: Identifiable, Hashable {
+struct TabDetails: Identifiable, Hashable {
+    
     var id = UUID()
     var image: String
     var title: String
