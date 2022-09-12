@@ -10,7 +10,7 @@ import SwiftUI
 struct CustomTabView: View {
     @Binding var selectedTab: Tabs
     var body: some View {
-        HStack(spacing: 1) {
+        HStack {
             Button {
                 selectedTab = .stats
             } label: {
@@ -38,7 +38,7 @@ struct CustomTabView: View {
                             .padding(.leading, 2)
                     }
                 }
-                .foregroundColor(selectedTab == .stats ? Color(hex: "7bc146") : Color(hex: "bababa"))
+                .foregroundColor(selectedTab == .stats ? Color.lightGreen : Color.text.t5)
             }
             .padding(.bottom, 8)
 
@@ -68,7 +68,7 @@ struct CustomTabView: View {
                             .padding(.leading, 18)
                     }
                 }
-                .foregroundColor(selectedTab == .clubs ? Color(hex: "7bc146") : Color(hex: "bababa"))
+                .foregroundColor(selectedTab == .clubs ? Color.lightGreen : Color.text.t5)
             }
             .padding(.bottom, 8)
 
@@ -104,7 +104,7 @@ struct CustomTabView: View {
                             .padding(.top, -8)
                     }
                 }
-                .foregroundColor(selectedTab == .golf ? Color(hex: "7bc146") : Color(hex: "bababa"))
+                .foregroundColor(selectedTab == .golf ? Color.lightGreen : Color.text.t5)
                 .offset(y: -17)
             }
             .padding()
@@ -134,7 +134,7 @@ struct CustomTabView: View {
                             .padding(.trailing, 18)
                     }
                 }
-                .foregroundColor(selectedTab == .score ? Color(hex: "7bc146") : Color(hex: "bababa"))
+                .foregroundColor(selectedTab == .score ? Color.lightGreen : Color.text.t5)
             }
             .padding(.bottom, 8)
 
@@ -164,11 +164,11 @@ struct CustomTabView: View {
                             .padding(.trailing, 2)
                     }
                 }
-                .foregroundColor(selectedTab == .devices ? Color(hex: "7bc146") : Color(hex: "bababa"))
+                .foregroundColor(selectedTab == .devices ? Color.lightGreen : Color.text.t5)
             }
             .padding(.bottom, 8)
         }
         .frame(width: 500, height: 60)
-        .background((Color(hex: "ffffff")).shadow(color: Color(hex: "0d000000"), radius: 5, x: 0, y: 0))
+        .background(Color.white.shadow(color: Color.shadow2, radius: 5, x: 0, y: 0))
     }
 }

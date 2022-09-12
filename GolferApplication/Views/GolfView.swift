@@ -15,18 +15,18 @@ struct GolfView: View {
             Text("WHERE ARE YOU PLAYING?")
                 .padding()
                 .font(Font.custom("ProximaNova-Bold", size: 18))
-                .foregroundColor(Color(hex: "5d5d5d"))
-            
+                .foregroundColor(Color.text.t1)
+
             HStack {
                 Text("Avon Fields Golf Course")
                     .padding([.leading, .trailing], 50)
                     .font(Font.custom("ProximaNova-Semibold", size: 15))
-                    .foregroundColor(Color(hex: "5d5d5d"))
+                    .foregroundColor(Color.text.t1)
 
                 Image("search_icon")
                     .padding(20)
             }
-            .background(Color.white.cornerRadius(20).shadow(color: Color(hex: "ededed"), radius: 5, x: 0, y: 0))
+            .background(Color.white.cornerRadius(20).shadow(color: Color.shadow2, radius: 5, x: 0, y: 0))
             
             HStack {
                 Spacer()
@@ -35,7 +35,7 @@ struct GolfView: View {
                 
                 Text("Devices")
                     .font(Font.custom("ProximaNova-Semibold", size: 15))
-                    .foregroundColor(Color(hex: "b9b9b9"))
+                    .foregroundColor(Color.text.t5)
 
                 Spacer()
                 Spacer()
@@ -56,7 +56,7 @@ struct GolfView: View {
                 VStack {
                     Text(" R1 Smart")
                         .font(Font.custom("ProximaNova-Bold", size: 18))
-                        .foregroundColor(Color(hex: "5d5d5d"))
+                        .foregroundColor(Color.text.t1)
 
                     Image("battery_not_connected")
                 }
@@ -69,11 +69,11 @@ struct GolfView: View {
 
                     Text("No Connection")
                         .font(Font.custom("ProximaNova-Semibold", size: 12))
-                        .foregroundColor(Color(hex: "ededed"))
+                        .foregroundColor(Color.shadow2)
                 }
             }
             .padding([.leading, .trailing], 40)
-            .background(Color.white.cornerRadius(25).shadow(color: Color(hex: "ededed"), radius: 5, x: 0, y: 0))
+            .background(Color.white.cornerRadius(25).shadow(color: Color.shadow2, radius: 5, x: 0, y: 0))
             .propotionalFrame(width: 0.9, height: 0.15 )
 
             HStack {
@@ -85,7 +85,7 @@ struct GolfView: View {
                 VStack {
                     Text("S1 Smart")
                         .font(Font.custom("ProximaNova-Bold", size: 18))
-                        .foregroundColor(Color(hex: "5d5d5d"))
+                        .foregroundColor(Color.text.t1)
 
                     Image("battery_not_connected")
                 }
@@ -98,20 +98,20 @@ struct GolfView: View {
                     
                     Text("No Connection")
                         .font(Font.custom("ProximaNova-Semibold", size: 12))
-                        .foregroundColor(Color(hex: "ededed"))
+                        .foregroundColor(Color.shadow2)
 
                 }
             }
             .padding([.leading, .trailing], 40)
-            .background(Color.white.cornerRadius(25).shadow(color: Color(hex: "ededed"), radius: 5, x: 0, y: 0)            )
+            .background(Color.white.cornerRadius(25).shadow(color: Color.shadow2, radius: 5, x: 0, y: 0))
             .propotionalFrame(width: 0.9, height: 0.15)
 
             Button("START ROUND") {
             }
-            .padding()
+            .padding(20)
+            .padding([.leading, .trailing], 90)
             .font(Font.custom("ProximaNova-Bold", size: 14))
-            .frame(width: 320, height: 62)
-            .background(Color(hex: "7bc146"))
+            .foregroundColor(Color.lightGreen)
             .foregroundColor(.white)
             .clipShape(RoundedRectangle(cornerRadius: 16))
 

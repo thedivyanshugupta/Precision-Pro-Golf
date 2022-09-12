@@ -15,6 +15,8 @@ struct DevicesView: View {
            
             Text("DEVICES")
                 .font(Font.custom("ProximaNova-Bold", size: 18))
+                .foregroundColor(Color.text.t1)
+
             
             HStack {
                 VStack {
@@ -32,23 +34,25 @@ struct DevicesView: View {
                     
                     Text("R1 Smart Rangefinder")
                         .font(Font.custom("ProximaNova-Bold", size: 17))
+                        .foregroundColor(Color.text.t1)
+
                     
                     Text("Connected")
                         .font(Font.custom("ProximaNova-Semibold", size: 14))
-                        .foregroundColor(Color(hex: "7bc146"))
+                        .foregroundColor(Color.lightGreen)
                 }
                 
                 VStack(spacing: -15) {
                     Text("100%")
                         .font(Font.custom("ProximaNova-Semibold", size: 14))
-                        .foregroundColor(Color(hex: "7bc146"))
+                        .foregroundColor(Color.lightGreen)
                         .padding()
 
                     Image("battery_connected")
                     Spacer()
                 }
             }
-            .background(Color.white.cornerRadius(25).shadow(color: Color(hex: "ededed"), radius: 5, x: 0, y: 0))
+            .background(Color.white.cornerRadius(25).shadow(color: Color.shadow2, radius: 5, x: 0, y: 0))
             .propotionalFrame(width: 0.9, height: 0.3 )
 
             HStack {
@@ -63,23 +67,22 @@ struct DevicesView: View {
                 
                 VStack(spacing: 10) {
                     Image("speaker_stock")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 140, height: 140)
-                    
+
                     Text("S1 Smart Speaker")
                         .font(Font.custom("ProximaNova-Bold", size: 16))
+                        .foregroundColor(Color.text.t1)
+
 
                     Text("Connected")
                         .font(Font.custom("ProximaNova-Semibold", size: 14))
-                        .foregroundColor(Color(hex: "7bc146"))
+                        .foregroundColor(Color.lightGreen)
                 }
                 
                 VStack(spacing: -15) {
                     
                     Text("100%")
                         .font(Font.custom("ProximaNova-Semibold", size: 14))
-                        .foregroundColor(Color(hex: "7bc146"))
+                        .foregroundColor(Color.lightGreen)
                         .padding()
 
                     Image("battery_connected")
@@ -87,7 +90,7 @@ struct DevicesView: View {
                     Spacer()
                 }
             }
-            .background(Color.white.cornerRadius(25).shadow(color: Color(hex: "ededed"), radius: 5, x: 0, y: 0)            )
+            .background(Color.white.cornerRadius(25).shadow(color: Color.shadow2, radius: 5, x: 0, y: 0)            )
             .propotionalFrame(width: 0.92, height: 0.3 )
 
             Text("")

@@ -32,14 +32,14 @@ struct ContentView: View {
                         
                         Text(tab.title)
                             .font(Font.custom("ProximaNova-Bold", size: 22))
-                            .foregroundColor(Color(hex: "5d5d5d"))
+                            .foregroundColor(Color.text.t1)
                             .padding()
                         
                         Text(tab.text)
                             .font(Font.custom("ProximaNova-Semibold", size: 14))
                             .frame(width: 265, height: 53)
                             .multilineTextAlignment(.center)
-                            .foregroundColor(Color(hex: "a1a1a1"))
+                            .foregroundColor(Color.text.t2)
                             .padding()
                         }
                         .tag(tab.index)
@@ -55,7 +55,7 @@ struct ContentView: View {
             HStack {
                 ForEach((1...5), id: \.self) { n in
                     Circle()
-                        .foregroundColor(currentPage == n ? Color(hex: "7bc146") : Color(hex: "ededed"))
+                        .foregroundColor(currentPage == n ? Color.lightGreen : Color.shadow2)
                        .frame(width: 10, height: 10)
                 }
             }
@@ -66,18 +66,18 @@ struct ContentView: View {
                 showingGolfView = true
             }, label: {
                     Text("GET STARTED") })
-            .padding()
+            .padding(20)
+            .padding([.leading, .trailing], 70)
             .font(Font.custom("ProximaNova-Bold", size: 14))
-            .frame(width: 303, height: 62)
-            .background(Color(hex: "7bc146"))
-            .foregroundColor(Color(hex: "ffffff"))
+            .background(Color.lightGreen)
+            .foregroundColor(.white)
             .clipShape(RoundedRectangle(cornerRadius: 16))
 
             Text("No Email Required")
                 .onTapGesture {
                 }
                 .font(Font.custom("ProximaNova-SemiboldIt", size: 14))
-                .foregroundColor(Color(hex: "a1a1a1"))
+                .foregroundColor(Color.text.t2)
             
             Button(action: {
                 showingGolfView = true
@@ -86,7 +86,7 @@ struct ContentView: View {
             .padding()
             .font(Font.custom("ProximaNova-Bold", size: 14))
             .background(.white)
-            .foregroundColor(Color(hex: "a1a1a1"))
+            .foregroundColor(Color.text.t2)
         }
         .background(Color.white)
         .fullScreenCover(isPresented: $showingGolfView) {
