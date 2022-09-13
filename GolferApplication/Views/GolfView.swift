@@ -107,11 +107,12 @@ struct GolfView: View {
             .propotionalFrame(width: 0.9, height: 0.15)
 
             Button("START ROUND") {
+                print("\(screenWidth) and \(screenHeight)")
             }
             .padding(20)
             .padding([.leading, .trailing], 90)
             .font(Font.custom("ProximaNova-Bold", size: 14))
-            .foregroundColor(Color.lightGreen)
+            .background(Color.lightGreen)
             .foregroundColor(.white)
             .clipShape(RoundedRectangle(cornerRadius: 16))
 

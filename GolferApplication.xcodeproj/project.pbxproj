@@ -21,6 +21,7 @@
 		1C428E7F28B3674500F11919 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C428E7E28B3674500F11919 /* Preview Assets.xcassets */; };
 		1C428E8628B367C500F11919 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C428E8528B367C400F11919 /* LaunchScreen.storyboard */; };
 		1C61B3D128CF1D8500F0F79B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C61B3D028CF1D8500F0F79B /* Colors.xcassets */; };
+		1C61B3D328D07AE800F0F79B /* DevicesDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C61B3D228D07AE800F0F79B /* DevicesDetails.swift */; };
 		1CA88FC628B3AE8A003CDC8F /* GolfScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA88FC528B3AE8A003CDC8F /* GolfScreenView.swift */; };
 		1CBAD55828C892C000E06B6E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBAD55728C892C000E06B6E /* Extensions.swift */; };
 		1CBAD55A28C8A8C400E06B6E /* DevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBAD55928C8A8C400E06B6E /* DevicesView.swift */; };
@@ -47,6 +48,7 @@
 		1C428E7E28B3674500F11919 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1C428E8528B367C400F11919 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C61B3D028CF1D8500F0F79B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		1C61B3D228D07AE800F0F79B /* DevicesDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesDetails.swift; sourceTree = "<group>"; };
 		1CA88FC528B3AE8A003CDC8F /* GolfScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GolfScreenView.swift; sourceTree = "<group>"; };
 		1CBAD55728C892C000E06B6E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1CBAD55928C8A8C400E06B6E /* DevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesView.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				1CBAD55F28C8C66900E06B6E /* TabDetails.swift */,
+				1C61B3D228D07AE800F0F79B /* DevicesDetails.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				1CBAD56028C8C66900E06B6E /* TabDetails.swift in Sources */,
 				1CBAD56528CB641A00E06B6E /* CustomTabView.swift in Sources */,
 				1C428E7A28B3673E00F11919 /* ContentView.swift in Sources */,
+				1C61B3D328D07AE800F0F79B /* DevicesDetails.swift in Sources */,
 				1C428E7828B3673E00F11919 /* GolferApplicationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

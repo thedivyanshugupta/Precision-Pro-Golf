@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct DevicesView: View {
+    @State var devices: [DevicesDetails] = [
+        DevicesDetails(image: "recon_hero_render", title: "R1 Smart Rangefinder"),
+        DevicesDetails(image: "speaker_stock", title: "  S1 Smart Speaker  ")
+    ]
     
     var body: some View {
         
@@ -16,9 +20,11 @@ struct DevicesView: View {
             Text("DEVICES")
                 .font(Font.custom("ProximaNova-Bold", size: 18))
                 .foregroundColor(Color.text.t1)
+           
+           ForEach(devices) { device in
 
-            
             HStack {
+
                 VStack {
                     Image("bluetooth_green")
                         .resizable()
@@ -28,73 +34,44 @@ struct DevicesView: View {
                     
                     Spacer()
                 }
-                
+                .propotionalFrame(width: 0.18, height: 0.3)
+
                 VStack(spacing: 10) {
-                    Image("recon_hero_render")
-                    
-                    Text("R1 Smart Rangefinder")
-                        .font(Font.custom("ProximaNova-Bold", size: 17))
-                        .foregroundColor(Color.text.t1)
-
-                    
-                    Text("Connected")
-                        .font(Font.custom("ProximaNova-Semibold", size: 14))
-                        .foregroundColor(Color.lightGreen)
-                }
-                
-                VStack(spacing: -15) {
-                    Text("100%")
-                        .font(Font.custom("ProximaNova-Semibold", size: 14))
-                        .foregroundColor(Color.lightGreen)
-                        .padding()
-
-                    Image("battery_connected")
-                    Spacer()
-                }
-            }
-            .background(Color.white.cornerRadius(25).shadow(color: Color.shadow2, radius: 5, x: 0, y: 0))
-            .propotionalFrame(width: 0.9, height: 0.3 )
-
-            HStack {
-                VStack {
-                    Image("bluetooth_green")
+                    Image(device.image)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 40, height: 40)
-                        .padding()
-                    Spacer()
-                }
-                
-                VStack(spacing: 10) {
-                    Image("speaker_stock")
 
-                    Text("S1 Smart Speaker")
+                    Text(device.title)
                         .font(Font.custom("ProximaNova-Bold", size: 16))
                         .foregroundColor(Color.text.t1)
 
-
+                    
                     Text("Connected")
                         .font(Font.custom("ProximaNova-Semibold", size: 14))
                         .foregroundColor(Color.lightGreen)
+                    Text("")
+
                 }
-                
+                .propotionalFrame(width: 0.48, height: 0.3)
+
                 VStack(spacing: -15) {
-                    
                     Text("100%")
                         .font(Font.custom("ProximaNova-Semibold", size: 14))
                         .foregroundColor(Color.lightGreen)
                         .padding()
 
                     Image("battery_connected")
-                    
                     Spacer()
                 }
-            }
-            .background(Color.white.cornerRadius(25).shadow(color: Color.shadow2, radius: 5, x: 0, y: 0)            )
-            .propotionalFrame(width: 0.92, height: 0.3 )
+                .propotionalFrame(width: 0.18, height: 0.3)
 
+            }
+            .background(Color.white.cornerRadius(25).shadow(color: Color.shadow2, radius: 5, x: 0, y: 0))
+            .propotionalFrame(width: 0.9, height: 0.3 )
+            }
+           
             Text("")
-                .frame(width: 500, height: 10)
+                .frame(width: screenWidth, height: 10)
            
             Spacer()
             Spacer()
