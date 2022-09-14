@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CustomTabView: View {
-    @Binding var selectedTab: Tabs
+    @Binding var selectedTab: CustomTabs
     var body: some View {
         HStack(spacing: -22) {
             Button {
@@ -28,12 +28,12 @@ struct CustomTabView: View {
                     if selectedTab == .stats {
                         Text("STATS")
                             .underline()
-                            .font(Font.custom("ProximaNova-Semibold", size: 12))
+                            .font(FontConstants.ProximaNovaSemibold12)
                             .propotionalFrame(width: 0.17, height: 0.01)
                     }
                     else {
                         Text("STATS")
-                            .font(Font.custom("ProximaNova-Semibold", size: 12))
+                            .font(FontConstants.ProximaNovaSemibold12)
                             .propotionalFrame(width: 0.17, height: 0.01)
                     }
                 }
@@ -59,12 +59,12 @@ struct CustomTabView: View {
                     if selectedTab == .clubs {
                         Text("CLUBS")
                             .underline()
-                            .font(Font.custom("ProximaNova-Semibold", size: 12))
+                            .font(FontConstants.ProximaNovaSemibold12)
                             .propotionalFrame(width: 0.17, height: 0.01)
                     }
                     else {
                         Text("CLUBS")
-                            .font(Font.custom("ProximaNova-Semibold", size: 12))
+                            .font(FontConstants.ProximaNovaSemibold12)
                             .propotionalFrame(width: 0.17, height: 0.01)
                     }
                 }
@@ -96,22 +96,19 @@ struct CustomTabView: View {
                     if selectedTab == .golf {
                         Text(" GOLF")
                             .underline()
-                            .font(Font.custom("ProximaNova-Semibold", size: 12))
+                            .font(FontConstants.ProximaNovaSemibold12)
                             .padding(.top, -8)
                             .propotionalFrame(width: 0.17, height: 0.01)
-
                     }
                     else {
                         Text(" GOLF")
-                            .font(Font.custom("ProximaNova-Semibold", size: 12))
+                            .font(FontConstants.ProximaNovaSemibold12)
                             .padding(.top, -8)
                             .propotionalFrame(width: 0.17, height: 0.01)
-
                     }
                 }
                 .foregroundColor(selectedTab == .golf ? Color.lightGreen : Color.text.t5)
                 .offset(y: -17)
-
             }
             .padding()
             
@@ -130,17 +127,16 @@ struct CustomTabView: View {
                     if selectedTab == .score {
                         Text("SCORE")
                             .underline()
-                            .font(Font.custom("ProximaNova-Semibold", size: 12))
+                            .font(FontConstants.ProximaNovaSemibold12)
                             .propotionalFrame(width: 0.17, height: 0.01)
                     }
                     else {
                         Text("SCORE")
-                            .font(Font.custom("ProximaNova-Semibold", size: 12))
+                            .font(FontConstants.ProximaNovaSemibold12)
                             .propotionalFrame(width: 0.17, height: 0.01)
                     }
                 }
                 .foregroundColor(selectedTab == .score ? Color.lightGreen : Color.text.t5)
-
             }
             .padding()
             .padding(.bottom, 8)
@@ -161,12 +157,12 @@ struct CustomTabView: View {
                     if selectedTab == .devices {
                         Text("DEVICES")
                             .underline()
-                            .font(Font.custom("ProximaNova-Semibold", size: 12))
+                            .font(FontConstants.ProximaNovaSemibold12)
                             .propotionalFrame(width: 0.17, height: 0.01)
                     }
                     else {
                         Text("DEVICES")
-                            .font(Font.custom("ProximaNova-Semibold", size: 12))
+                            .font(FontConstants.ProximaNovaSemibold12)
                             .propotionalFrame(width: 0.17, height: 0.01)
                     }
                 }
@@ -176,6 +172,7 @@ struct CustomTabView: View {
             .padding(.bottom, 8)
         }
         .padding()
+        .padding([.leading,.trailing,.bottom], 10)
         .frame(width: screenWidth, height: 60)
         .background(Color.white.shadow(color: Color.shadow2, radius: 5, x: 0, y: 0))
     }

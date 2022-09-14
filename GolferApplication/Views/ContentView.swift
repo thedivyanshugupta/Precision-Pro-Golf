@@ -31,12 +31,12 @@ struct ContentView: View {
                             .propotionalFrame(width: tab.imageWidth, height: tab.imageHeight)
                         
                         Text(tab.title)
-                            .font(Font.custom("ProximaNova-Bold", size: 22))
+                            .font(FontConstants.ProximaNovaBold22)
                             .foregroundColor(Color.text.t1)
                             .padding()
                         
                         Text(tab.text)
-                            .font(Font.custom("ProximaNova-Semibold", size: 14))
+                            .font(FontConstants.ProximaNovaSemibold14)
                             .frame(width: 265, height: 53)
                             .multilineTextAlignment(.center)
                             .foregroundColor(Color.text.t2)
@@ -68,7 +68,7 @@ struct ContentView: View {
                     Text("GET STARTED") })
             .padding(20)
             .padding([.leading, .trailing], 70)
-            .font(Font.custom("ProximaNova-Bold", size: 14))
+            .font(FontConstants.ProximaNovaBold14)
             .background(Color.lightGreen)
             .foregroundColor(.white)
             .clipShape(RoundedRectangle(cornerRadius: 16))
@@ -76,7 +76,7 @@ struct ContentView: View {
             Text("No Email Required")
                 .onTapGesture {
                 }
-                .font(Font.custom("ProximaNova-SemiboldIt", size: 14))
+                .font(FontConstants.ProximaNovaSemiboldItalic14)
                 .foregroundColor(Color.text.t2)
             
             Button(action: {
@@ -84,7 +84,7 @@ struct ContentView: View {
             }, label: {
                     Text("LOG IN").underline()})
             .padding()
-            .font(Font.custom("ProximaNova-Bold", size: 14))
+            .font(FontConstants.ProximaNovaBold14)
             .background(.white)
             .foregroundColor(Color.text.t2)
         }

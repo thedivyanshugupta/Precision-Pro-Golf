@@ -18,7 +18,7 @@ struct DevicesView: View {
        VStack(spacing: 30) {
            
             Text("DEVICES")
-                .font(Font.custom("ProximaNova-Bold", size: 18))
+               .font(FontConstants.ProximaNovaBold18)
                 .foregroundColor(Color.text.t1)
            
            ForEach(devices) { device in
@@ -42,21 +42,19 @@ struct DevicesView: View {
                         .scaledToFit()
 
                     Text(device.title)
-                        .font(Font.custom("ProximaNova-Bold", size: 16))
+                        .font(FontConstants.ProximaNovaBold16)
                         .foregroundColor(Color.text.t1)
 
-                    
                     Text("Connected")
-                        .font(Font.custom("ProximaNova-Semibold", size: 14))
+                        .font(FontConstants.ProximaNovaSemibold14)
                         .foregroundColor(Color.lightGreen)
-                    Text("")
-
+                        .padding()
                 }
                 .propotionalFrame(width: 0.48, height: 0.3)
 
                 VStack(spacing: -15) {
                     Text("100%")
-                        .font(Font.custom("ProximaNova-Semibold", size: 14))
+                        .font(FontConstants.ProximaNovaSemibold14)
                         .foregroundColor(Color.lightGreen)
                         .padding()
 
@@ -64,7 +62,6 @@ struct DevicesView: View {
                     Spacer()
                 }
                 .propotionalFrame(width: 0.18, height: 0.3)
-
             }
             .background(Color.white.cornerRadius(25).shadow(color: Color.shadow2, radius: 5, x: 0, y: 0))
             .propotionalFrame(width: 0.9, height: 0.3 )

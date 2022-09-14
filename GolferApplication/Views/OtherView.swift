@@ -10,8 +10,8 @@ import SwiftUI
 struct StatsView: View {
     var body: some View {
         Color(.white)
-            .ignoresSafeArea()
             .navigationTitle("STATS")
+            .ignoresSafeArea()
     }
 }
 
@@ -31,3 +31,8 @@ struct ScoreView: View {
     }
 }
 
+struct StatsView_Previews: PreviewProvider {
+    static var previews: some View {
+        StatsView()
+    }
+}

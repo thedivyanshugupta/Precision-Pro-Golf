@@ -14,13 +14,13 @@ struct GolfView: View {
             
             Text("WHERE ARE YOU PLAYING?")
                 .padding()
-                .font(Font.custom("ProximaNova-Bold", size: 18))
+                .font(FontConstants.ProximaNovaBold18)
                 .foregroundColor(Color.text.t1)
 
             HStack {
                 Text("Avon Fields Golf Course")
                     .padding([.leading, .trailing], 50)
-                    .font(Font.custom("ProximaNova-Semibold", size: 15))
+                    .font(FontConstants.ProximaNovaSemibold15)
                     .foregroundColor(Color.text.t1)
 
                 Image("search_icon")
@@ -32,11 +32,11 @@ struct GolfView: View {
                 Spacer()
                 
                 Image("bluetooth_icon")
-                
+                                    
                 Text("Devices")
-                    .font(Font.custom("ProximaNova-Semibold", size: 15))
+                    .font(FontConstants.ProximaNovaSemibold15)
                     .foregroundColor(Color.text.t5)
-
+// Too many spacers used to set the image and text in left
                 Spacer()
                 Spacer()
                 Spacer()
@@ -55,7 +55,7 @@ struct GolfView: View {
 
                 VStack {
                     Text(" R1 Smart")
-                        .font(Font.custom("ProximaNova-Bold", size: 18))
+                        .font(FontConstants.ProximaNovaBold18)
                         .foregroundColor(Color.text.t1)
 
                     Image("battery_not_connected")
@@ -68,7 +68,7 @@ struct GolfView: View {
                         .frame(width: 40, height: 40)
 
                     Text("No Connection")
-                        .font(Font.custom("ProximaNova-Semibold", size: 12))
+                        .font(FontConstants.ProximaNovaSemibold12)
                         .foregroundColor(Color.shadow2)
                 }
             }
@@ -84,7 +84,7 @@ struct GolfView: View {
 
                 VStack {
                     Text("S1 Smart")
-                        .font(Font.custom("ProximaNova-Bold", size: 18))
+                        .font(FontConstants.ProximaNovaBold18)
                         .foregroundColor(Color.text.t1)
 
                     Image("battery_not_connected")
@@ -97,7 +97,7 @@ struct GolfView: View {
                         .frame(width: 40, height: 40)
                     
                     Text("No Connection")
-                        .font(Font.custom("ProximaNova-Semibold", size: 12))
+                        .font(FontConstants.ProximaNovaSemibold12)
                         .foregroundColor(Color.shadow2)
 
                 }
@@ -111,7 +111,7 @@ struct GolfView: View {
             }
             .padding(20)
             .padding([.leading, .trailing], 90)
-            .font(Font.custom("ProximaNova-Bold", size: 14))
+            .font(FontConstants.ProximaNovaBold14)
             .background(Color.lightGreen)
             .foregroundColor(.white)
             .clipShape(RoundedRectangle(cornerRadius: 16))

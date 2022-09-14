@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum Tabs {
+enum CustomTabs {
     case stats
     case clubs
     case golf
@@ -16,7 +16,7 @@ enum Tabs {
 }
 
 struct GolfScreenView: View {
-    @State private var selectedTab: Tabs = .golf
+    @State private var selectedTab: CustomTabs = .golf
     var body: some View {
         VStack {
             switch selectedTab {
