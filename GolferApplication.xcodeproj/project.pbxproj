@@ -21,6 +21,8 @@
 		1C428E7F28B3674500F11919 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C428E7E28B3674500F11919 /* Preview Assets.xcassets */; };
 		1C428E8628B367C500F11919 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C428E8528B367C400F11919 /* LaunchScreen.storyboard */; };
 		1C604B6B28D1C48F003B0771 /* FontConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C604B6A28D1C48F003B0771 /* FontConstants.swift */; };
+		1C604B6D28D1D67E003B0771 /* NewCustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C604B6C28D1D67E003B0771 /* NewCustomTabView.swift */; };
+		1C604B6F28D1E550003B0771 /* CustomTabDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C604B6E28D1E550003B0771 /* CustomTabDetails.swift */; };
 		1C61B3D128CF1D8500F0F79B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C61B3D028CF1D8500F0F79B /* Colors.xcassets */; };
 		1C61B3D328D07AE800F0F79B /* DevicesDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C61B3D228D07AE800F0F79B /* DevicesDetails.swift */; };
 		1CA88FC628B3AE8A003CDC8F /* GolfScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA88FC528B3AE8A003CDC8F /* GolfScreenView.swift */; };
@@ -28,8 +30,7 @@
 		1CBAD55A28C8A8C400E06B6E /* DevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBAD55928C8A8C400E06B6E /* DevicesView.swift */; };
 		1CBAD55C28C8ADF800E06B6E /* GolfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBAD55B28C8ADF800E06B6E /* GolfView.swift */; };
 		1CBAD55E28C8B3F100E06B6E /* OtherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBAD55D28C8B3F100E06B6E /* OtherView.swift */; };
-		1CBAD56028C8C66900E06B6E /* TabDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBAD55F28C8C66900E06B6E /* TabDetails.swift */; };
-		1CBAD56528CB641A00E06B6E /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBAD56428CB641A00E06B6E /* CustomTabView.swift */; };
+		1CBAD56028C8C66900E06B6E /* OnboardingTabDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBAD55F28C8C66900E06B6E /* OnboardingTabDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,8 @@
 		1C428E7E28B3674500F11919 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1C428E8528B367C400F11919 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C604B6A28D1C48F003B0771 /* FontConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConstants.swift; sourceTree = "<group>"; };
+		1C604B6C28D1D67E003B0771 /* NewCustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCustomTabView.swift; sourceTree = "<group>"; };
+		1C604B6E28D1E550003B0771 /* CustomTabDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabDetails.swift; sourceTree = "<group>"; };
 		1C61B3D028CF1D8500F0F79B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		1C61B3D228D07AE800F0F79B /* DevicesDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesDetails.swift; sourceTree = "<group>"; };
 		1CA88FC528B3AE8A003CDC8F /* GolfScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GolfScreenView.swift; sourceTree = "<group>"; };
@@ -56,8 +59,7 @@
 		1CBAD55928C8A8C400E06B6E /* DevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesView.swift; sourceTree = "<group>"; };
 		1CBAD55B28C8ADF800E06B6E /* GolfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GolfView.swift; sourceTree = "<group>"; };
 		1CBAD55D28C8B3F100E06B6E /* OtherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherView.swift; sourceTree = "<group>"; };
-		1CBAD55F28C8C66900E06B6E /* TabDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDetails.swift; sourceTree = "<group>"; };
-		1CBAD56428CB641A00E06B6E /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		1CBAD55F28C8C66900E06B6E /* OnboardingTabDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTabDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +133,7 @@
 			children = (
 				1C428E7928B3673E00F11919 /* ContentView.swift */,
 				1CA88FC528B3AE8A003CDC8F /* GolfScreenView.swift */,
-				1CBAD56428CB641A00E06B6E /* CustomTabView.swift */,
+				1C604B6C28D1D67E003B0771 /* NewCustomTabView.swift */,
 				1CBAD55B28C8ADF800E06B6E /* GolfView.swift */,
 				1CBAD55928C8A8C400E06B6E /* DevicesView.swift */,
 				1CBAD55D28C8B3F100E06B6E /* OtherView.swift */,
@@ -142,7 +144,8 @@
 		1CBAD56228C8E5CE00E06B6E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1CBAD55F28C8C66900E06B6E /* TabDetails.swift */,
+				1CBAD55F28C8C66900E06B6E /* OnboardingTabDetails.swift */,
+				1C604B6E28D1E550003B0771 /* CustomTabDetails.swift */,
 				1C61B3D228D07AE800F0F79B /* DevicesDetails.swift */,
 			);
 			path = Models;
@@ -243,11 +246,12 @@
 				1CBAD55828C892C000E06B6E /* Extensions.swift in Sources */,
 				1CA88FC628B3AE8A003CDC8F /* GolfScreenView.swift in Sources */,
 				1CBAD55E28C8B3F100E06B6E /* OtherView.swift in Sources */,
-				1CBAD56028C8C66900E06B6E /* TabDetails.swift in Sources */,
-				1CBAD56528CB641A00E06B6E /* CustomTabView.swift in Sources */,
+				1CBAD56028C8C66900E06B6E /* OnboardingTabDetails.swift in Sources */,
 				1C428E7A28B3673E00F11919 /* ContentView.swift in Sources */,
 				1C604B6B28D1C48F003B0771 /* FontConstants.swift in Sources */,
+				1C604B6D28D1D67E003B0771 /* NewCustomTabView.swift in Sources */,
 				1C61B3D328D07AE800F0F79B /* DevicesDetails.swift in Sources */,
+				1C604B6F28D1E550003B0771 /* CustomTabDetails.swift in Sources */,
 				1C428E7828B3673E00F11919 /* GolferApplicationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

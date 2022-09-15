@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-struct TabDetails: Identifiable, Hashable {
-    
+struct OnboardingTabDetails: Identifiable, Hashable {
     var id = UUID()
     var image: String
     var title: String
@@ -16,5 +15,4 @@ struct TabDetails: Identifiable, Hashable {
     var index: Int
     var imageWidth: Double
     var imageHeight: Double
-
 }

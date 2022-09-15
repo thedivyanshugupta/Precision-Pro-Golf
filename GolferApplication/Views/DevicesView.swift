@@ -23,48 +23,48 @@ struct DevicesView: View {
            
            ForEach(devices) { device in
 
-            HStack {
+                HStack {
 
-                VStack {
-                    Image("bluetooth_green")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 40, height: 40)
-                        .padding()
-                    
-                    Spacer()
+                    VStack {
+                        Image("bluetooth_green")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 40)
+                            .padding()
+                        
+                        Spacer()
+                    }
+                    .propotionalFrame(width: 0.18, height: 0.3)
+
+                    VStack(spacing: 10) {
+                        Image(device.image)
+                            .resizable()
+                            .scaledToFit()
+
+                        Text(device.title)
+                            .font(FontConstants.ProximaNovaBold16)
+                            .foregroundColor(Color.text.t1)
+
+                        Text("Connected")
+                            .font(FontConstants.ProximaNovaSemibold14)
+                            .foregroundColor(Color.lightGreen)
+                            .padding()
+                    }
+                    .propotionalFrame(width: 0.48, height: 0.3)
+
+                    VStack(spacing: -15) {
+                        Text("100%")
+                            .font(FontConstants.ProximaNovaSemibold14)
+                            .foregroundColor(Color.lightGreen)
+                            .padding()
+
+                        Image("battery_connected")
+                        Spacer()
+                    }
+                    .propotionalFrame(width: 0.18, height: 0.3)
                 }
-                .propotionalFrame(width: 0.18, height: 0.3)
-
-                VStack(spacing: 10) {
-                    Image(device.image)
-                        .resizable()
-                        .scaledToFit()
-
-                    Text(device.title)
-                        .font(FontConstants.ProximaNovaBold16)
-                        .foregroundColor(Color.text.t1)
-
-                    Text("Connected")
-                        .font(FontConstants.ProximaNovaSemibold14)
-                        .foregroundColor(Color.lightGreen)
-                        .padding()
-                }
-                .propotionalFrame(width: 0.48, height: 0.3)
-
-                VStack(spacing: -15) {
-                    Text("100%")
-                        .font(FontConstants.ProximaNovaSemibold14)
-                        .foregroundColor(Color.lightGreen)
-                        .padding()
-
-                    Image("battery_connected")
-                    Spacer()
-                }
-                .propotionalFrame(width: 0.18, height: 0.3)
-            }
-            .background(Color.white.cornerRadius(25).shadow(color: Color.shadow2, radius: 5, x: 0, y: 0))
-            .propotionalFrame(width: 0.9, height: 0.3 )
+                .background(Color.white.cornerRadius(25).shadow(color: Color.shadow2, radius: 5, x: 0, y: 0))
+                .propotionalFrame(width: 0.9, height: 0.3 )
             }
            
             Text("")

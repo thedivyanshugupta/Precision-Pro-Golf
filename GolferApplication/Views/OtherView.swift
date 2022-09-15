@@ -10,8 +10,8 @@ import SwiftUI
 struct StatsView: View {
     var body: some View {
         Color(.white)
-            .navigationTitle("STATS")
             .ignoresSafeArea()
+            .navigationTitle("STATS")
     }
 }
 

@@ -41,8 +41,9 @@ struct GolfScreenView: View {
                         DevicesView()
                     }
             }
-            CustomTabView(selectedTab: $selectedTab)
-                .frame(height: 50)
+            
+            NewCustomTabView(currentTab: $selectedTab)
+                .frame(height: 60)
         }
     }
 }

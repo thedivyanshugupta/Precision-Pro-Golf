@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var onboardingTabs: [TabDetails] = [
-        TabDetails(image: "green_logo", title: "Welcome to", text: "View detailed course information, learn club distances, and measure progress so you can Hit More Greens.", index: 1, imageWidth: 0.33, imageHeight: 0.2),
-        TabDetails(image: "onboarding_2", title: "View Detailed", text: "Front, center, and back of the green. With 35,000+ golf courses, we’ve got you covered.", index: 2, imageWidth: 0.560, imageHeight: 0.350),
-        TabDetails(image: "onboarding_3", title: "Learn Club Distances", text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.", index: 3, imageWidth: 0.602, imageHeight: 0.340),
-        TabDetails(image: "onboarding_4", title: "Analyze Progress", text: "See where you’re strong, where you’re weak, and what area you need to improve for lower scores.", index: 4, imageWidth: 0.586, imageHeight: 0.356),
-        TabDetails(image: "onboarding_5", title: "Connect a Device", text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.", index: 5, imageWidth: 0.592, imageHeight: 0.352),
+    @State var onboardingTabs: [OnboardingTabDetails] = [
+        OnboardingTabDetails(image: "green_logo", title: "Welcome to", text: "View detailed course information, learn club distances, and measure progress so you can Hit More Greens.", index: 1, imageWidth: 0.33, imageHeight: 0.2),
+        OnboardingTabDetails(image: "onboarding_2", title: "View Detailed", text: "Front, center, and back of the green. With 35,000+ golf courses, we’ve got you covered.", index: 2, imageWidth: 0.560, imageHeight: 0.350),
+        OnboardingTabDetails(image: "onboarding_3", title: "Learn Club Distances", text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.", index: 3, imageWidth: 0.602, imageHeight: 0.340),
+        OnboardingTabDetails(image: "onboarding_4", title: "Analyze Progress", text: "See where you’re strong, where you’re weak, and what area you need to improve for lower scores.", index: 4, imageWidth: 0.586, imageHeight: 0.356),
+        OnboardingTabDetails(image: "onboarding_5", title: "Connect a Device", text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.", index: 5, imageWidth: 0.592, imageHeight: 0.352),
     ]
     @State private var showingGolfView = false
     @State var currentIndex = 0
@@ -37,7 +37,7 @@ struct ContentView: View {
                         
                         Text(tab.text)
                             .font(FontConstants.ProximaNovaSemibold14)
-                            .frame(width: 265, height: 53)
+                            .propotionalFrame(width: 0.7, height: 0.15)
                             .multilineTextAlignment(.center)
                             .foregroundColor(Color.text.t2)
                             .padding()
